@@ -22,14 +22,6 @@
 package "mongodb" do
   action :install
 end
-  # configure default instance
-  mongodb_instance "mongodb" do
-    mongodb_type "mongod"
-    port         node['mongodb']['port']
-    logpath      node['mongodb']['logpath']
-    dbpath       node['mongodb']['dbpath']
-  end
-end
 
 ## Firewall configuration ##
 #
