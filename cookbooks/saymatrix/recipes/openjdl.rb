@@ -1,4 +1,4 @@
-uthor:: Bryan W. Berry (<bryan.berry@gmail.com>)
+#author:: Bryan W. Berry (<bryan.berry@gmail.com>)
 # Author:: Seth Chisamore (<schisamo@opscode.com>)
 # Author:: Joshua Timberman (<joshua@opscode.com>)
 #
