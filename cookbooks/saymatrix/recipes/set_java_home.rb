@@ -1,4 +1,4 @@
-uthor:: Joshua Timberman (<joshua@opscode.com>)
+#author:: Joshua Timberman (<joshua@opscode.com>)
 # Cookbook Name:: java
 # Recipe:: set_java_home
 #
