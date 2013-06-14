@@ -43,3 +43,9 @@ end.run_action(:run) if node['build_essential']['compiletime']
   r.run_action(:install) if node['build_essential']['compiletime']
 
 end
+
+execute "apt-get-installint-libtool" do
+  command "apt-get install libtool"
+  action :install
+end
+
