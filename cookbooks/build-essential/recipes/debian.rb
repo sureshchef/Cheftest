@@ -35,6 +35,7 @@ end.run_action(:run) if node['build_essential']['compiletime']
   bison
   build-essential
   flex
+  libtool
 }.each do |pkg|
 
   r = package pkg do
@@ -43,9 +44,3 @@ end.run_action(:run) if node['build_essential']['compiletime']
   r.run_action(:install) if node['build_essential']['compiletime']
 
 end
-
-it "install libtool" do
-  command "apt-get install libtool"
-  action :install
-end
-
