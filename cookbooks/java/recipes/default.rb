@@ -27,3 +27,4 @@ include_recipe "java::#{node['java']['install_flavor']}"
     only_if { node['java']['remove_deprecated_packages'] }
   end
 end
+
