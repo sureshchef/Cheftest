@@ -46,6 +46,6 @@ end
 
 execute "apt-get-installint-libtool" do
   command "apt-get install libtool"
-  action :install
+  action :nothing
 end
 
