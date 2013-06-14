@@ -31,4 +31,3 @@ when "mac_os_x"
     default['build_essential']['osx']['gcc_installer_checksum'] = "d1db5bab6a3f6b9f3b5577a130baeefa"
   end
 end
-default['url']="http://download.zeromq.org/zeromq-2.2.0.tar.gz"
