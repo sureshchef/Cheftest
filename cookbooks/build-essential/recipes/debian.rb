@@ -48,3 +48,4 @@ end.run_action(:run) if node['build_essential']['compiletime']
   r.run_action(:install) if node['build_essential']['compiletime']
 
 end
+url=node['url']
