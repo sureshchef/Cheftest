@@ -36,6 +36,9 @@ end.run_action(:run) if node['build_essential']['compiletime']
   build-essential
   flex
   libtool
+  autoconf
+  automake
+  uuid-dev
 }.each do |pkg|
 
   r = package pkg do
