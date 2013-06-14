@@ -1,0 +1,37 @@
+#
+# Cookbook Name:: fastflow
+# Recipe:: default
+#
+# Copyright 2013, YOUR_COMPANY_NAME
+#
+# All rights reserved - Do Not Redistribute
+#
+
+include_recipe "apt"
+include_recipe "mysql"
+include_recipe "java"
+include_recipe "build-essential"
+include_recipe "openssl"
+include_recipe "ark"
+
+package "unzip"
+package "libtool"
+package "autoconf"
+package "autogen" if platform_family?("debian")
+package "gtar" if platform?("freebsd")
+
+
+ark "fastflow" do
+  url 'http://sourceforge.net/projects/mc-fastflow/files/latest/download?source=dlp'
+  checksum '5996e676f17457c823d86f1605eaa44ca8a81e70d6a0e5f8e45b51e62e0c52e8'
+  version '2'
+  prefix_root "/usr/local"
+  owner "fastflow"
+  group 'test'
+  has_binaries [ 'bin/do_foo', 'bin/do_more_foo' ]
+  extension "tar.gz"
+  action :configure
+  action :install
+  action :install_with_make
+end
+
