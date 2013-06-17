@@ -45,7 +45,7 @@ ark "zeromq" do
    prefix_home '/usr/local'
    prefix_bin  '/usr/local/include'
    action :configure
-   puts ['export  LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib"']
+   puts ['export  LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib']
    puts ['export ZMQ_PATH=/usr/local']
    
 end
