@@ -14,17 +14,16 @@ include_recipe "openssl"
 include_recipe "ark"
 include_recipe "subversion"
 include_recipe "application"
+include_recipe "play"
 
-execute "update package index" do
-  command "gem install passenger"
-  ignore_failure true
-  action :nothing
-end.run_action(:run)
-
-
+#execute "update package index" do
+ # command "gem install passenger"
+ # ignore_failure true
+ # action :nothing
+ # end.run_action(:run)
 
 application "saymetrix" do
-  path "/usr/local"
+  path "/home/chef/Downloads/saymetrix"
   owner "app-user"
   group "app-group"
 
@@ -32,15 +31,15 @@ application "saymetrix" do
   revision "production"
 
   # Apply the rails LWRP from application_ruby
-  rails do
+  #rails do
     # Rails-specific configuration. See the README in the
     # application_ruby cookbook for more information.
-  end
+  #end
 
   # Apply the passenger_apache2 LWRP, also from application_ruby
-  passenger_apache2 do
+ # passenger_apache2 do
     # Passenger-specific configuration.
-  end
+ # end
 end
 
 
@@ -52,15 +51,16 @@ end
 application "my_app" do
   restart_command "kill -1 `cat /var/run/one.pid`"
   environment "LC_ALL" => "en", "FOO" => "bar"
+end 
 
-  rails do
-    restart_command "touch /tmp/something"
-    environment "LC_ALL" => "en_US"
-  end
+ # rails do
+  #  restart_command "touch /tmp/something"
+  #  environment "LC_ALL" => "en_US"
+  #end
 
-  passenger_apache2 do
-    environment "deault" => "chef"
-  end
-end
+  #passenger_apache2 do
+  #  environment "deault" => "chef"
+  #end
+#end
 
 
