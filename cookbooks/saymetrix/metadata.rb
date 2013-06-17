@@ -9,9 +9,6 @@ version          '0.1.0'
 
 depends "apt"
 depends "java"
-depends "build-essential"
-depends "openssl"
 depends "ark"
-depends "subversion"
 depends "application"
 depends "play"

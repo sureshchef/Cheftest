@@ -9,10 +9,7 @@
 
 include_recipe "apt"
 include_recipe "java"
-include_recipe "build-essential"
-include_recipe "openssl"
 include_recipe "ark"
-include_recipe "subversion"
 include_recipe "application"
 include_recipe "play"
 
