@@ -21,7 +21,7 @@ include_recipe "play"
 
 application "saymetrix" do
   path "/home/chef/Downloads/saymetrix"
-  owner "app-user"
+  owner "ubuntu"
   group "app-group"
 
   repository "https://github.com/hrijulp/fastflow/blob/master/saymetrix.zip?raw=true"
