@@ -14,6 +14,16 @@ include_recipe "openssl"
 include_recipe "ark"
 include_recipe "subversion"
 
+ZMQ_HOME = node['ZMQ']['ZMQ_HOME']
+LD_LIBRARY_PATH = node['LD_LIBRARY']['LD_LIBRARY_PATH']
+
+
+#do
+#ENV['ZMQ_PATH='] = '/usr/local'
+#ENV['LD_LIBRARY_PATH'] = '/usr/local/lib'
+#ENV['LD_LIBRARY_PATH'] = '#{ENV['LD_LIBRARY_PATH']}:/usr/local/lib'
+#end
+
 ark "fastflow" do
     url 'https://github.com/hrijulp/fastflow/blob/master/fastflow-2.0.0.tar.gz?raw=true'
     checksum '89ba5fde0c596db388c3bbd265b63007a9cc3df3a8e6d79a46780c1a39408cb5'
@@ -42,12 +52,10 @@ ark "zeromq" do
    url 'https://github.com/zeromq/libzmq/tarball/master'
    extension "tar.gz"
    prefix_root '/usr/local'
-   prefix_home '/usr/local'
-   prefix_bin  '/usr/local/include'
+   prefix_home '/usr/local/include'
+   prefix_bin  '/usr/local/zeromq-1/autogen.sh'
    action :configure
-   puts ['export  LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib']
-   puts ['export ZMQ_PATH=/usr/local']
-   
+ 
 end
 
 
