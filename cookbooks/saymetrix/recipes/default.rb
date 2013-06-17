@@ -10,6 +10,7 @@
 include_recipe "apt"
 include_recipe "java"
 include_recipe "build-essential"
+include_recipe "gem_installer"
 include_recipe "openssl"
 include_recipe "ark"
 include_recipe "subversion"
