@@ -62,7 +62,7 @@ ark "zeromq" do
   prefix_root '/usr/local'
   prefix_home '/usr/local/include'
   prefix_bin  '/usr/local/zeromq-1'
-  action :make
+  action :install_with_make
 end
 
 
