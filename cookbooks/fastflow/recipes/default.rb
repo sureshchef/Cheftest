@@ -54,20 +54,17 @@ ark "zeromq" do
   prefix_root '/usr/local'
   prefix_home '/usr/local/include'
   prefix_bin  '/usr/local/include'
-  action :configure
+  action :install_with_make
+
 end
 
-ark "zeromq" do
-  url 'http://download.zeromq.org/zeromq-2.2.0.tar.gz'
-  prefix_root '/usr/local'
-  prefix_home '/usr/local/include'
-  prefix_bin  '/usr/local/include'
-  action :install_with_make
-  command :"./configure"
-  command "make"
-  command "make install"
-  
-end
+#ark "zeromq" do
+ # url 'http://download.zeromq.org/zeromq-2.2.0.tar.gz'
+ # prefix_root '/usr/local'
+ # prefix_home '/usr/local/include'
+ # prefix_bin  '/usr/local/include'
+ # action :install_with_make
+#end
 
 
 
