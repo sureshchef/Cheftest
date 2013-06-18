@@ -63,22 +63,10 @@ ark "zeromq" do
   prefix_home '/usr/local/include'
   prefix_bin  '/usr/local/include'
   action :install_with_make
+  command :"./configure"
+  command "make"
+  command "make install"
   
-end
-
-execute "./configure" do
-
-  action :nothing
-end
-
-execute "make" do
- 
-  action :nothing
-end
-
-execute "make install" do
- 
-  action :nothing
 end
 
 
