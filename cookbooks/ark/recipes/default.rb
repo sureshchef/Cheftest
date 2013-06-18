@@ -21,6 +21,7 @@
 
 package "unzip"
 package "libtool"
+package "uuid-dev"
 package "rsync"
 package "autoconf"
 package "make"
