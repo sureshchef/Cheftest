@@ -302,6 +302,8 @@ action :configure do
     environment new_resource.environment
     notifies :run, "execute[autogen #{new_resource.path}]"
     notifies :run, "execute[configure #{new_resource.path}]"
+    notifies :run, "execute[make #{new_resource.path}]"
+    notifies :run, "execute[make install #{new_resource.path}]"
     action :nothing
   end
 
@@ -321,4 +323,20 @@ action :configure do
     environment new_resource.environment
     action :nothing
   end
+ execute "make #{new_resource.path}" do
+    command "make #{new_resource.make_opts.join(' ')}"
+    only_if "test -f make"
+    cwd new_resource.path
+    environment new_resource.environment
+    action :nothing
+  end
+
+  execute "make install #{new_resource.path}" do
+    command "make install #{new_resource.make_opts.join(' ')}"
+    only_if "test -f make install"
+    cwd new_resource.path
+    environment new_resource.environment
+    action :nothing
+  end
+
 end
