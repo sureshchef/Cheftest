@@ -72,12 +72,12 @@ execute "./configure" do
 end
 
 execute "make" do
-  prefix_bin '/usr/local/zeromq-1'
+ 
   action :nothing
 end
 
 execute "make install" do
-  prefix_bin '/usr/local/zeromq-1'
+ 
   action :nothing
 end
 
