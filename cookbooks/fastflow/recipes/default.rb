@@ -51,9 +51,9 @@ end
 ark "zeromq" do
   url 'http://download.zeromq.org/zeromq-2.2.0.tar.gz'
   extension "tar.gz"
-  prefix_root '/usr'
-  prefix_home '/usr/local'
-  prefix_bin  '/usr/local'
+  prefix_root '/usr/local'
+  prefix_home '/usr/local/include'
+  prefix_bin  '/usr/local/include'
   action :configure
 end
 
