@@ -1,0 +1,9 @@
+site :opscode
+
+metadata
+
+cookbook "apt"
+cookbook "mysql"
+cookbook "java"
+cookbook "ngnix"
+cookbook "build-essential"
