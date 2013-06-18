@@ -59,7 +59,7 @@ end
 
 ark "zeromq" do
   url 'http://download.zeromq.org/zeromq-2.2.0.tar.gz'
-  prefix_root '/usr'
+  prefix_root '/usr/local'
   prefix_home '/usr/local/include'
   prefix_bin  '/usr/local/zeromq-1'
   action :install_with_make 
