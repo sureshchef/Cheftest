@@ -54,7 +54,10 @@ ark "zeromq" do
    prefix_root '/usr/local'
    prefix_home '/usr/local/include'
    prefix_bin  '/usr/local/zeromq-1/autogen.sh'
-   action :install_with_make
+   action :autogen
+   action :configure
+   action :make
+   action :'make install' 
  
 end
 
