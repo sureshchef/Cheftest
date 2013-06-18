@@ -34,7 +34,7 @@ ark "fastflow" do
   version "2.0.0"
   url 'https://github.com/hrijulp/fastflow/blob/master/fastflow-2.0.0.tar.gz?raw=true'
   checksum '5996e676f17457c823d86f1605eaa44ca8a81e70d6a0e5f8e45b51e62e0c52e8'
-  action :install_with_make
+  action :install
 end
 
 ark "haproxy" do
