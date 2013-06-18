@@ -49,19 +49,26 @@ ark "haproxy" do
 end
 
 ark "zeromq" do
-   url 'https://github.com/zeromq/libzmq/tarball/master'
-   extension "tar.gz"
-   prefix_root '/usr/local'
-   prefix_home '/usr/local/include'
-   prefix_bin  '/usr/local/zeromq-1/autogen.sh'
-   action :configure
-end
-
-ark "zeromqmake" do
-  prefix_root '/usr/local'
-  prefix_home '/usr/local/include'
-  prefix_bin '/usr/local/zeromq-1/configure'
+  url 'http://download.zeromq.org/zeromq-2.2.0.tar.gz'
+  extension "tar.gz"
+  prefix_root '/usr'
+  prefix_home '/usr/local'
+  prefix_bin  '/usr/local'
   action :configure
 end
 
+ark "zeromq" do
+  url 'http://download.zeromq.org/zeromq-2.2.0.tar.gz'
+  prefix_root '/usr'
+  prefix_home '/usr/local/include'
+  prefix_bin  '/usr/local/zeromq-1'
+  action :autogen 
+end
 
+ark "zeromq" do
+  url 'http://download.zeromq.org/zeromq-2.2.0.tar.gz'
+  prefix_root '/usr'
+  prefix_home '/usr/local/include'
+  prefix_bin  '/usr/local/zeromq-1'
+  action :install_with_make 
+end
