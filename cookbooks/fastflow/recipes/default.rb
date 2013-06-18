@@ -69,7 +69,7 @@ require_recipe 'build-essential'
 
 package "wget" do
   action :install
-
+end
 %w[
     make && make install
   ].each do |pkg|
@@ -78,12 +78,12 @@ end
 
 
 
-file '/etc/ld.so.conf.d/pcre.conf' do
+  file '/etc/ld.so.conf.d/pcre.conf' do
   action :nothing
   owner 'root'
   group 'root'
   mode 00644
-
+end
 execute "ldconfig" do
   user "root"
   action :nothing
