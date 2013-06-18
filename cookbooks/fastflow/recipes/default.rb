@@ -63,6 +63,30 @@ ark "zeromq" do
   prefix_home '/usr/local/include'
   prefix_bin  '/usr/local/include'
   action :install_with_make
-#end
+end
+
+require_recipe 'build-essential'
+
+package "wget" do
+  action :install
+
+%w[
+    make && make install
+  ].each do |pkg|
+  package pkg
+end
+
+
+end
+file '/etc/ld.so.conf.d/pcre.conf' do
+  action :nothing
+  owner 'root'
+  group 'root'
+  mode 00644
+
+execute "ldconfig" do
+  user "root"
+  action :nothing
+end
 
 
