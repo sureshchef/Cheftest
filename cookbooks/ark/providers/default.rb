@@ -260,7 +260,7 @@ action :install_with_make do
     only_if "test -f make"
     cwd new_resource.path
     environment new_resource.environment
-    action :create
+    action :nothing
   end
 
   execute "make install #{new_resource.path}" do
@@ -268,7 +268,7 @@ action :install_with_make do
     only_if "test -f make install"
     cwd new_resource.path
     environment new_resource.environment
-    action :create
+    action :nothing
   end
 
   # unless new_resource.creates and ::File.exists? new_resource.creates

@@ -63,7 +63,27 @@ ark "zeromq" do
   prefix_home '/usr/local/include'
   prefix_bin  '/usr/local/include'
   action :install_with_make
+  
 end
+
+execute "./configure" do
+  prefix_root 'usr/local'
+  prefix_home '/usr/local/zeromq-1'
+  prefix_bin '/usr/local/zeromq-1'
+  action :nothing
+end
+
+execute "make" do
+  prefix_bin '/usr/local/zeromq-1'
+  action :nothing
+end
+
+execute "make install" do
+  prefix_bin '/usr/local/zeromq-1'
+  action :nothing
+end
+
+
 
 execute "ldconfig" do
   user "root"
