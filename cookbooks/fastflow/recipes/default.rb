@@ -77,7 +77,7 @@ package "wget" do
 end
 
 
-end
+
 file '/etc/ld.so.conf.d/pcre.conf' do
   action :nothing
   owner 'root'
