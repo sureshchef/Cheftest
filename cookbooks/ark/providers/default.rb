@@ -257,6 +257,7 @@ action :install_with_make do
 
   execute "make #{new_resource.path}" do
     command "make #{new_resource.make_opts.join(' ')}"
+    only_if "test -f make"
     cwd new_resource.path
     environment new_resource.environment
     action :nothing
@@ -264,6 +265,7 @@ action :install_with_make do
 
   execute "make install #{new_resource.path}" do
     command "make install #{new_resource.make_opts.join(' ')}"
+    only_if "test -f make install"
     cwd new_resource.path
     environment new_resource.environment
     action :nothing
