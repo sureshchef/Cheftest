@@ -57,7 +57,7 @@ ark "zeromq" do
    action :autogen
    action :configure
    action :make
-   action :'make install' 
+    
  
 end
 
