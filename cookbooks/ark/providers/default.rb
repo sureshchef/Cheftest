@@ -1,4 +1,4 @@
-#
+
 # Cookbook Name:: ark
 # Provider:: Ark
 #
