@@ -232,9 +232,9 @@ action :install_with_make do
     cwd new_resource.path
     environment new_resource.environment
     notifies :run, "execute[autogen #{new_resource.path}]"
-    notifies :run, "execute[configure #{new_resource.path}]"
-    notifies :run, "execute[make #{new_resource.path}]"
-    notifies :run, "execute[make install #{new_resource.path}]"
+#    notifies :run, "execute[configure #{new_resource.path}]"
+ #   notifies :run, "execute[make #{new_resource.path}]"
+  #  notifies :run, "execute[make install #{new_resource.path}]"
     action :nothing
   end
 
@@ -243,6 +243,8 @@ action :install_with_make do
     only_if "test -f ./autogen.sh"
     cwd new_resource.path
     environment new_resource.environment
+ notifies :run, "execute[configure #{new_resource.path}]"
+
     action :nothing
     ignore_failure true
   end
@@ -252,6 +254,8 @@ action :install_with_make do
     only_if "test -f ./configure"
     cwd new_resource.path
     environment new_resource.environment
+ notifies :run, "execute[make #{new_resource.path}]"
+
     action :nothing
   end
 
@@ -260,6 +264,8 @@ action :install_with_make do
     only_if "test -f make"
     cwd new_resource.path
     environment new_resource.environment
+ notifies :run, "execute[make install #{new_resource.path}]"
+
     action :nothing
   end
 
