@@ -67,8 +67,6 @@ ark "zeromq" do
 end
 
 execute "./configure" do
-  prefix_root 'usr/local'
-  prefix_home '/usr/local/zeromq-1'
   prefix_bin '/usr/local/zeromq-1'
   action :nothing
 end
