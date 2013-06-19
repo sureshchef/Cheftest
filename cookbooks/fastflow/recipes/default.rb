@@ -75,7 +75,6 @@ end
 
 %w[
     make 
-    make install
   ].each do |pkg|
   package pkg
 end
