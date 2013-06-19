@@ -74,7 +74,8 @@ package "wget" do
 end
 
 %w[
-    make & make install
+    make 
+    make install
   ].each do |pkg|
   package pkg
 end
