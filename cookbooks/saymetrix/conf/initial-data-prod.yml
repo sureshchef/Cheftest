@@ -1,0 +1,138 @@
+# Reference data required for a production system
+
+#
+# ApplicationRoles
+#
+ApplicationRole(admin):
+  name:              admin
+
+ApplicationRole(support):
+  name:              support
+
+ApplicationRole(kam):
+  name:              kam
+
+#
+# WebUsers
+#
+WebUser(danu.admin):
+  email:              admin@danutech.com
+  passwordHash:       Sh48AOceCRwXqSEbSsGD2VRKClJMVeFZxuneNblha74UdA3a+YVXpuHJ6brmaORN # check with ct
+  firstname:          DANU
+  lastname:           Admin
+  role:               admin
+
+#
+# Accounts
+#
+Account(acct0):
+  key: NONE
+  name: None
+  manager: danu.admin
+
+#
+# SystemSettings
+#
+# NOTE: Wierd join syntax is required in order to load strings containing Play template variables.
+#
+SystemSetting(redact_enabled):
+  typeId: 2
+  key:    redact.enabled
+  value:  false
+
+SystemSetting(msg_register_fail):
+  typeId: 1
+  key:    msg.register.failure
+  value:  It looks like you're not registered for SayMetrix. Please get in touch with your account manager.
+
+SystemSetting(msg_register_success):
+  typeId: 1
+  key:    msg.register.success
+  value:  Thank you for registering for SayMetrix.
+
+SystemSetting(msg_report_fail):
+  typeId: 1
+  key:    msg.report.failure
+  value:  It looks like you no longer have access to SayMetrix. Please get in touch with your account manager.
+
+SystemSetting(msg_report_success):
+  typeId: 1
+  key:    msg.report.success
+  value:  ${['${firstname}'].join()}, thanks for your feedback and helping us to improve our network.
+
+#
+# IncidentGroups
+#
+IncidentGroup(voice):
+  name: Voice
+
+IncidentGroup(data):
+  name: Data
+
+IncidentGroup(other):
+  name: Other
+
+#
+# IncidentTypes (Voice)
+#
+IncidentType(voice_dropped_call):
+   key:  voice_dropped_call
+   name:  Dropped Call
+   incidentGroup: voice
+
+IncidentType(voice_poor_sound):
+   key:  voice_poor_sound
+   name:  Poor Sound
+   incidentGroup: voice
+
+IncidentType(voice_network_busy):
+   key:  voice_network_busy
+   name:  Network Busy
+   incidentGroup: voice
+
+IncidentType(voice_no_coverage):
+   key:  voice_no_coverage
+   name:  No Coverage
+   incidentGroup: voice
+
+IncidentType(voice_other):
+   key:  voice_other
+   name:  Other
+   incidentGroup: voice
+
+#
+# IncidentTypes (Data)
+#
+IncidentType(data_no_coverage):
+   key:  data_no_coverage
+   name:  No Coverage
+   incidentGroup: data
+
+IncidentType(data_no_communication):
+   key:  data_no_communication
+   name:  No Communication
+   incidentGroup: data
+
+IncidentType(data_slow_connection):
+   key:  data_slow_connection
+   name:  Slow Connection
+   incidentGroup: data
+
+IncidentType(data_dropped_connection):
+   key:  data_dropped_connection
+   name:  Dropped Connection
+   incidentGroup: data
+
+IncidentType(data_other):
+   key:  data_other
+   name:  Other
+   incidentGroup: data
+
+#
+# IncidentTypes (Other)
+#
+IncidentType(other_other):
+   key:  other_other
+   name:  Other
+   incidentGroup: other
+

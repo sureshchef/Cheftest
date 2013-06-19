@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="no-js ie7 ie78 ie789" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 ie78 ie789" lang="en"><![endif]-->
+<!--[if IE 9]><html class="no-js ie9 ie789" lang="en"><![endif]-->
+<!--[if (gt IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
+<html class="no-js" lang="en"><!--<![endif]-->
+	<head>
+		<meta charset="${_response_encoding}"/>
+		<title>#{get 'title' /}</title>
+		<meta name="author" content=""/>
+		<meta name="description" content=""/>
+        <link rel="shortcut icon" type="image/ico" href="@{'/public/images/favicon.ico'}">
+		<meta http-equiv="Content-Type" content="text/html; charset=${_response_encoding}"/>
+		  %{ minified = (play.Play.mode == play.Play.Mode.PROD) ? ".min" : "" }%    
+		  #{stylesheet 'bootstrap' + minified + '.css' /}
+		  #{get 'moreStyles' /}
+		<!--[if lte IE 9]>
+		<link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/ie-login.css'}"></script>
+		<![endif]-->
+        #{if play.Play.id.contains('vfie')}
+        <link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/smartfeedback.css'}" />
+        <style type="text/css">
+            body { background-color: #A00; }
+        </style>
+        #{/if}
+        <script src="@{'/public/javascripts/modernizr.custom.js'}"></script>
+	</head>
+	<body onload="FocusOnInput()" class="secure" >
+	  <div class="wrapper">
+	    <div class="navbar navbar-fixed-top">
+	      <div class="navbar-inner">
+	        <div class="container-fluid">
+	          <a class="btn btn-navbar" data-toggle="collapse"
+	            data-target=".nav-collapse"> <span class="icon-bar"></span>
+	            <span class="icon-bar"></span> <span class="icon-bar"></span>
+	          </a>
+                <a href="@{Incidents.index()}">
+                #{if play.Play.id.contains('vfie')}
+                    <img src="@{'/public/images/smartfeedback-logo.png'}" width="130" height="33"/>
+                #{/if}
+                #{else}
+                    <img src="@{'/public/images/saymetrix-logo.png'}" width="113" height="33"/>
+                #{/else}
+                </a>
+	          <div class="btn-group pull-right">
+	          </div>
+	          <div class="nav-collapse">
+	            <ul class="nav">
+	            </ul>
+	          </div> <!--/.nav-collapse -->
+	        </div>
+	      </div>
+	    </div>
+	    <div class="container-fluid">
+	      #{doLayout /}
+	    </div>
+	  </div>
+	  	<div class="footer">
+	      	<ul>
+				<li><a href="#" id="f-home">About</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Testimonials</a></li>
+				<li><a href="#">Terms</a></li>
+				<li><a href="#">Privacy</a></li>
+				<li><a href="#" class="footer-twitter">Twitter</a></li>
+				<li><a href="#" class="footer-blog">Blog</a></li>
+				<li class="copyright">&copy; ${org.joda.time.DateTime.now().year().getAsText()} DANU Technologies Ltd.</li>
+			</ul>
+	  	</div>
+	  <!-- Le javascript
+	  ================================================== -->
+	  <!-- Placed at the end of the document so the pages load faster -->
+	  #{script 'jquery-1.7.2.min.js' /}
+      #{script 'jquery.placeholder-enhanced.js' /}
+	  #{script 'bootstrap-alert.js' /}
+		  #{get 'moreScripts' /}
+	</body>
+</html>

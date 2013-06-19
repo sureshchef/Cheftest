@@ -1,0 +1,461 @@
+/* SCSS Variables
+--------------------------------------------- */
+/*$bg-color: #27506C;*/
+/*$bg-color: #0067C8;*/
+/*$bg-color: #882811;*/
+/* SCSS Mixins
+--------------------------------------------- */
+/* General
+--------------------------------------------- */
+/* line 54, ../sass/secure.scss */
+html, body {
+  height: 100%; }
+
+/* line 56, ../sass/secure.scss */
+body {
+  font-size: 14px;
+  line-height: 18px;
+  color: #333;
+  background-color: #2d75ad; }
+
+/* line 63, ../sass/secure.scss */
+#login-content {
+  top: 50%;
+  height: 328px;
+  width: 838px;
+  margin: -154px 0 0 -418px;
+  position: absolute;
+  left: 50%; }
+
+/* Navbar
+--------------------------------------------- */
+/* line 75, ../sass/secure.scss */
+.navbar img {
+  padding-top: 3px;
+  position: absolute;
+  left: 50%;
+  margin-left: -418px; }
+
+/* Welcome box
+--------------------------------------------- */
+/* line 85, ../sass/secure.scss */
+#login-content .welcome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 520px;
+  height: 328px;
+  background: black url("../images/mapBig.png") no-repeat left top;
+  border: 0;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 125px rgba(255, 255, 255, 0.35);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 125px rgba(255, 255, 255, 0.35);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 125px rgba(255, 255, 255, 0.35);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px; }
+
+/* line 99, ../sass/secure.scss */
+#login-content .welcome-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 470px;
+  padding: 20px 20px 20px 23px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #666;
+  text-align: left;
+  text-shadow: #000 0 1px 2px; }
+  /* line 112, ../sass/secure.scss */
+  #login-content .welcome-text h1 {
+    margin: 0;
+    margin-bottom: 128px;
+    font-size: 62px;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+    text-rendering: optimizeLegibility; }
+  /* line 121, ../sass/secure.scss */
+  #login-content .welcome-text h2 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+    text-rendering: optimizeLegibility; }
+  /* line 129, ../sass/secure.scss */
+  #login-content .welcome-text p {
+    margin: 0;
+    text-shadow: #fff 0 1px 2px; }
+
+/* Login box
+--------------------------------------------- */
+/* line 139, ../sass/secure.scss */
+#login-content .login {
+  top: 0;
+  height: 108px;
+  position: absolute;
+  left: 536px;
+  width: 300px;
+  background: white;
+  background-image: -moz-linear-gradient(top, white, #dddddd);
+  background-image: -ms-linear-gradient(top, white, #dddddd);
+  /* IE10 */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #dddddd));
+  background-image: -webkit-linear-gradient(top, white, #dddddd);
+  background-image: -o-linear-gradient(top, white, #dddddd);
+  background-image: linear-gradient(top, #ffffff, #dddddd);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7',endColorstr='#dddddd',GradientType=0);
+  /* IE6-9 */
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  border-style: solid;
+  border-width: 1px;
+  border-left-color: #EEE;
+  border-right-color: #EEE;
+  border-bottom-color: #CCC;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
+
+/* line 145, ../sass/secure.scss */
+#login-content .login-form {
+  font-size: 12px;
+  margin-bottom: 0; }
+  /* line 149, ../sass/secure.scss */
+  #login-content .login-form table {
+    position: absolute;
+    top: 48px;
+    left: 12px;
+    width: 276px; }
+    /* line 155, ../sass/secure.scss */
+    #login-content .login-form table td {
+      padding: 0;
+      /*			width:100%;*/ }
+
+/* line 162, ../sass/secure.scss */
+#login-content #username {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 266px;
+  height: 20px;
+  display: inline-block;
+  padding: 4px;
+  margin: 0;
+  outline: none;
+  background-color: white;
+  -webkit-transition: .2s linear background;
+  -moz-transition: .2s linear background;
+  transition: .2s linear background;
+  border: 1px solid #CCC;
+  -webkit-box-shadow: inset 0 1px 0 #EEE,white 0 1px 0;
+  -moz-box-shadow: inset 0 1px 0 #eee,#fff 0 1px 0;
+  box-shadow: inset 0 1px 0 #EEE,white 0 1px 0;
+  font-size: 13px;
+  line-height: 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+/* line 190, ../sass/secure.scss */
+#login-content .password {
+  /*	position: absolute;*/
+  /*	top: 0;*/
+  height: 28px;
+  display: block;
+  padding: 4px;
+  margin: 0 5px 0 0;
+  /*	outline: none;*/
+  background-color: white;
+  border: 1px solid #CCC;
+  -webkit-box-shadow: inset 0 1px 0 #EEE,white 0 1px 0;
+  -moz-box-shadow: inset 0 1px 0 #eee,#fff 0 1px 0;
+  box-shadow: inset 0 1px 0 #EEE,white 0 1px 0;
+  -webkit-transition: .2s linear box-shadow;
+  -moz-transition: .2s linear box-shadow;
+  transition: .2s linear box-shadow;
+  line-height: normal;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+/* line 219, ../sass/secure.scss */
+#login-content #username:focus, .password:focus {
+  border: 1px solid #56B4EF;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 0 8px rgba(82, 168, 236, 0.6); }
+
+/* line 226, ../sass/secure.scss */
+#login-content #signin {
+  /*    float: right;*/ }
+
+/* line 230, ../sass/secure.scss */
+#login-content .remember-field {
+  position: absolute;
+  top: 82px;
+  left: 12px;
+  width: 276px;
+  margin: 0; }
+  /* line 237, ../sass/secure.scss */
+  #login-content .remember-field label {
+    display: inline;
+    margin: 0;
+    font-size: 11px;
+    text-align: left;
+    line-height: 13px;
+    color: #999;
+    -webkit-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+    -moz-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+    cursor: pointer; }
+
+/* line 251, ../sass/secure.scss */
+#login-content #remember {
+  display: inline-block;
+  width: auto;
+  height: 13px;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  background-color: transparent;
+  -webkit-transition: .2s linear background;
+  -moz-transition: .2s linear background;
+  transition: .2s linear background;
+  vertical-align: text-top;
+  line-height: normal;
+  border: none;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.075);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.075);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.075);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+/* line 276, ../sass/secure.scss */
+#login-content .seperator {
+  display: inline;
+  margin: 0 1px 0 2px;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: bold;
+  color: #999;
+  -webkit-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+  -moz-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6); }
+
+/* line 288, ../sass/secure.scss */
+#login-content .forgot {
+  display: inline;
+  margin: 0;
+  outline: 0;
+  font-size: 11px;
+  line-height: 13px;
+  color: #999;
+  text-decoration: none;
+  -webkit-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+  -moz-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6); }
+
+/* Latest News box
+--------------------------------------------- */
+/* line 305, ../sass/secure.scss */
+#login-content .latest {
+  top: 120px;
+  height: 206px;
+  position: absolute;
+  left: 536px;
+  width: 300px;
+  background: white;
+  background-image: -moz-linear-gradient(top, white, #dddddd);
+  background-image: -ms-linear-gradient(top, white, #dddddd);
+  /* IE10 */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #dddddd));
+  background-image: -webkit-linear-gradient(top, white, #dddddd);
+  background-image: -o-linear-gradient(top, white, #dddddd);
+  background-image: linear-gradient(top, #ffffff, #dddddd);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7',endColorstr='#dddddd',GradientType=0);
+  /* IE6-9 */
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  border-style: solid;
+  border-width: 1px;
+  border-left-color: #EEE;
+  border-right-color: #EEE;
+  border-bottom-color: #CCC;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  color: #777;
+  -webkit-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+  -moz-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6); }
+  /* line 317, ../sass/secure.scss */
+  #login-content .latest h2 {
+    position: relative;
+    display: block;
+    padding: 10px 12px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    border-bottom: 1px solid #E2E2E2;
+    -webkit-box-shadow: 0 1px 0 white;
+    -moz-box-shadow: 0 1px 0 #fff;
+    box-shadow: 0 1px 0 white;
+    strong-font-weight: 500;
+    strong-color: #333333; }
+  /* line 338, ../sass/secure.scss */
+  #login-content .latest .twitter-feed {
+    position: relative;
+    display: block;
+    padding: 5px 12px;
+    height: 110px; }
+    /* line 344, ../sass/secure.scss */
+    #login-content .latest .twitter-feed h2 {
+      font-size: 13px;
+      line-height: 16px;
+      font-weight: 500; }
+    /* line 349, ../sass/secure.scss */
+    #login-content .latest .twitter-feed p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 21px;
+      color: #333; }
+    /* line 355, ../sass/secure.scss */
+    #login-content .latest .twitter-feed a {
+      color: #009BCD;
+      text-decoration: none; }
+      /* line 358, ../sass/secure.scss */
+      #login-content .latest .twitter-feed a:hover {
+        color: #AAA;
+        text-decoration: none; }
+    /* line 363, ../sass/secure.scss */
+    #login-content .latest .twitter-feed span {
+      display: block; }
+      /* line 365, ../sass/secure.scss */
+      #login-content .latest .twitter-feed span a {
+        color: #009BCD;
+        text-decoration: none; }
+        /* line 368, ../sass/secure.scss */
+        #login-content .latest .twitter-feed span a:hover {
+          color: #009BCD;
+          text-decoration: underline; }
+    /* line 374, ../sass/secure.scss */
+    #login-content .latest .twitter-feed .details {
+      font-size: 11px;
+      line-height: 16px;
+      color: #888; }
+  /* line 381, ../sass/secure.scss */
+  #login-content .latest ul#twitter_update_list {
+    margin: 0px 0px 0px 0px;
+    list-style: none; }
+    /* line 385, ../sass/secure.scss */
+    #login-content .latest ul#twitter_update_list li {
+      padding: 0px 0px 5px 0px;
+      margin: 0px 0px 0px 0px;
+      display: none;
+      /* Prevents the entire feed list from showing momentarily on page load */ }
+  /* line 392, ../sass/secure.scss */
+  #login-content .latest .read-more {
+    position: relative;
+    display: block;
+    padding: 5px 12px 10px;
+    margin-top: 5px;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 300;
+    color: #777;
+    border-top: 1px solid #eee;
+    -webkit-box-shadow: 0 -1px 0 #b2b2b2;
+    -moz-box-shadow: 0 -1px 0 #b2b2b2;
+    box-shadow: 0 -1px 0 #b2b2b2; }
+
+/* Footer
+--------------------------------------------- */
+/* line 413, ../sass/secure.scss */
+.footer {
+  margin-left: 0;
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+  color: white;
+  color: rgba(255, 255, 255, 0.25); }
+  /* line 423, ../sass/secure.scss */
+  .footer ul {
+    display: inline-block; }
+    /* line 425, ../sass/secure.scss */
+    .footer ul li {
+      display: inline;
+      margin: 0 3px; }
+      /* line 428, ../sass/secure.scss */
+      .footer ul li a {
+        text-decoration: none;
+        outline: 0;
+        color: white;
+        color: rgba(255, 255, 255, 0.5); }
+        /* line 434, ../sass/secure.scss */
+        .footer ul li a:hover {
+          text-decoration: none;
+          color: white; }
+
+/* Alerts
+--------------------------------------------- */
+/* line 447, ../sass/secure.scss */
+#login-content .well {
+  position: absolute;
+  top: -50px;
+  right: 9px;
+  -moz-box-shadow: 3px 4px 2px rgba(33, 33, 33, 0.4);
+  -webkit-box-shadow: 3px 4px 2px rgba(33, 33, 33, 0.4);
+  box-shadow: 3px 4px 2px rgba(33, 33, 33, 0.4); }
+  /* line 456, ../sass/secure.scss */
+  #login-content .well .close {
+    line-height: 15px;
+    margin-left: 3px; }
+
+/* Older browser support for placeholders
+--------------------------------------------- */
+/* line 464, ../sass/secure.scss */
+.placeholder {
+  color: #999; }
+
+/* Forgot Password Page
+--------------------------------------------- */
+/* line 472, ../sass/secure.scss */
+#forgot-content {
+  margin-top: 60px; }
+
+/* line 476, ../sass/secure.scss */
+#forgot-modal {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%; }
+  /* line 483, ../sass/secure.scss */
+  #forgot-modal .modal-header {
+    padding: 2% 13%; }
+  /* line 487, ../sass/secure.scss */
+  #forgot-modal .modal-body {
+    padding: 4% 13%; }
+  /* line 491, ../sass/secure.scss */
+  #forgot-modal .modal-footer {
+    text-align: left;
+    padding: 3% 13% 4%; }
+  /* line 497, ../sass/secure.scss */
+  #forgot-modal .submit {
+    margin-bottom: 9px;
+    margin-left: 16px; }

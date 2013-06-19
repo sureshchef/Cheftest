@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="no-js ie7 ie78 ie789" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 ie78 ie789" lang="en"><![endif]-->
+<!--[if IE 9]><html class="no-js ie9 ie789" lang="en"><![endif]-->
+<!--[if (gt IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
+<html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="${_response_encoding}"/>
+  <title>#{get 'title' /}</title>
+  <meta name="author" content=""/>
+  <meta name="description" content=""/>
+  <link rel="shortcut icon" type="image/ico" href="@{'/public/images/favicon.ico'}">
+    %{
+        rootFolder = play.Play.configuration.get('http.path');
+        if (rootFolder == null) {
+            rootFolder = '';
+        }
+    }%
+  %{ minified = (play.Play.mode == play.Play.Mode.PROD) ? ".min" : "" }%    
+  #{press.stylesheet 'bootstrap' + minified + '.css', compress:false /}    
+  #{press.stylesheet 'main.css' /}
+  #{get 'moreStyles' /}
+  #{press.compressed-stylesheet /}
+  #{get 'extStyles' /}
+  #{get 'printStyles' /}
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/ie.css'}"></script>
+    <![endif]-->
+  <script src="@{'/public/javascripts/modernizr.custom.js'}"></script>
+    <script type="text/javascript">
+        var rootFolder = "${rootFolder}";
+    </script>
+    #{if play.Play.id.contains('vfie')}
+    <link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/smartfeedback.css'}" />
+    #{/if}
+</head>
+<body>
+  <div class="wrapper">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse"
+            data-target=".nav-collapse"> <span class="icon-bar"></span>
+            <span class="icon-bar"></span> <span class="icon-bar"></span>
+          </a>
+          #{if play.Play.id.contains('vfie')}
+            <img src="@{'public/images/smartfeedback-logo.png'}" width="130" height="33"/>
+          #{/if}
+          #{else}
+            <img src="@{'public/images/saymetrix-logo.png'}" width="113" height="33"/>
+          #{/else}
+          <div class="btn-group pull-right">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="icon-user"></i> ${webuser} <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="@{Settings.index()}">Settings</a></li>
+                <li class="divider"></li>
+                <li><a href="@{Secure.logout()}">Sign Out</a></li>
+            </ul>
+          </div>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li id="incidents"><a href="@{Incidents.index()}"><i class="icon-map-marker icon-white icon-gray"></i>&nbsp;Incidents</a></li>
+              #{deadbolt.restrict roles:[['support'], ['admin']]}
+              <li id="incidents-drop" class="dropdown" style="display: none;">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-map-marker icon-white icon-gray"></i>&nbsp;Incidents <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                      <li><a class="incident-create" data-backdrop="static" href="@{Incidents.index()}#create">Report Incident</a></li>
+                      <li class="divider"></li>
+                      <li><a class="events-view" data-backdrop="static" href="@{Incidents.index()}#view">View Network Events</a></li>
+                      <li><a class="event-create" data-backdrop="static" href="@{Incidents.index()}#create">Report Network Event</a></li>
+                  </ul>
+              </li>
+              #{/deadbolt.restrict}
+              <li id="reports"><a href="@{Reports.index()}"><i class="icon-signal icon-white icon-gray"></i>&nbsp;Reports</a></li>
+              #{deadbolt.restrict roles:[['admin']]}
+              <li id="admin"><a href="@{Accounts.index()}"><i class="icon-cog icon-white icon-gray"></i>&nbsp;Admin</a></li>
+              #{/deadbolt.restrict}
+            </ul>
+          </div> <!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      #{doLayout /}
+    </div>
+    <div class="push"><!--//--></div>
+  </div>
+  <footer class="container-fluid">
+    <div id="footer-inner">
+      <h4 id="incidents-total">
+        <strong>0</strong> incidents reported
+      </h4>
+      <ul id="footer-nav">
+<!--        <li><a href="/site/about" id="f-home">About</a></li>
+        <li><a href="/site/faq">FAQ</a></li>
+        <li><a href="/site/contact">Contact</a></li>
+        <li><a href="/site/testimonials">Testimonials</a></li>
+        <li><a href="/site/terms">Terms</a></li>
+        <li><a href="/site/privacy">Privacy</a></li>-->
+        <li><a href="#" id="f-home">About</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+      <p>SayMetrix &copy; ${org.joda.time.DateTime.now().year().getAsText()} DANU Technologies Ltd.</p>
+      <p>
+<!--        <a href="http://twitter.com/saymetrix" class="footer-twitter">Twitter</a>
+        <a href="http://blog.saymetrix.com" class="footer-blog">Blog</a>-->
+        <a href="#" class="footer-twitter">Twitter</a>
+        <a href="#" class="footer-blog">Blog</a>
+      </p>
+    </div>
+  </footer>
+  <!-- Le javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  #{press.script 'ie-fixes.js' /}
+  #{press.script src:'jquery-1.7.2' + minified + '.js', compress:false /}
+  #{press.script 'bootstrap-transition.js' /}
+  #{press.script 'bootstrap-alert.js' /}
+  #{press.script 'bootstrap-modal.js' /}
+  #{press.script 'bootstrap-tab.js' /}
+  #{press.script 'bootstrap-dropdown.js' /}
+  #{press.script 'bootstrap-tooltip.js' /}
+  #{press.script 'bootstrap-button.js' /}
+  #{press.script 'jquery.placeholder-enhanced.js' /}
+  #{get 'moreScripts' /}
+  #{get 'tagScripts' /}
+  #{press.compressed-script /}
+  <script>
+  	$("##{get 'currentTab' /}").addClass("active");
+    #{deadbolt.restrict roles:[['support'], ['admin']]}
+    if ("#{get 'currentTab' /}" == "incidents") {
+        $('#incidents').removeClass("active").css({display:"none"});
+        $('#incidents-drop').addClass("active").css({display:"block"});
+    }
+    #{/deadbolt.restrict}
+    var totalIncidents = 0;
+    $.getJSON("@{Incidents.totalIncidents()}", function(newIncidents) {
+        $('#incidents-total strong').text(addThousandSeparator(parseInt(newIncidents)))
+    });
+    
+    var addThousandSeparator = function(nStr) {
+        nStr += '';
+        x = nStr.split('.');
+        x1 = x[0];
+        x2 = x.length > 1 ? '.' + x[1] : '';
+        var rgx = /(\d+)(\d{3})/;
+        while (rgx.test(x1)) {
+            x1 = x1.replace(rgx, '$1' + ',' + '$2');
+        }
+        return x1;
+    }
+  </script>
+</body>
+</html>

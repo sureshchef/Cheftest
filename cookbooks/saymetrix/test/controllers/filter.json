@@ -1,0 +1,24 @@
+{
+    "name": "fileTestFilter",
+    "incidentPeriodStart": "07/07/2013",
+    "incidentPeriodEnd": "31/07/2013",
+    "blockOutPeriod": [
+    "",
+    ""
+    ],
+    "incidentTypes": [
+    "voice_poor_sound",
+    "data_slow_connection"
+    ],
+    "locationTech": [
+    "NETWORK"
+    ],
+    "position": [
+    "OUTDOOR"
+    ],
+    "frequency": [
+    "SELDOM"
+    ],
+    "cellid": "",
+    "msisdn": ""
+}

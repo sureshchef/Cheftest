@@ -1,0 +1,13 @@
+/* Extra styling rules for IE on the 404/500 pages
+--------------------------------------------- */
+.no-rgba .footer {
+    color: #6699BB;
+}
+
+.no-rgba .footer ul li a {
+    color: #AABBDD;
+}
+
+.no-rgba .footer ul li a:hover {
+    color: #FFFFFF;
+}

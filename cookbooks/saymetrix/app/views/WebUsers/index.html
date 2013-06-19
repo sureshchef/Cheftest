@@ -1,0 +1,59 @@
+#{extends 'admin.html' /}
+#{set title:'Users' /}
+#{set currentTab:'admin' /}
+#{set 'moreScripts'}
+  #{press.script 'sm-users.js' /}
+#{/set}
+
+<h1>Users</h1>
+<table id="users" class="table table-striped table-bordered" cellpadding="0" cellspacing="0" border="0">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th class="actions">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+<div id="create" class="modal hide fade">
+  <div class="modal-header">
+    <img class="spinner close" src="@{'/public/images/spinner.gif'}">  
+    <h3></h3>
+  </div>
+  <div class="modal-body">
+    <form class="form-horizontal" action="@{WebUsers.index()}" method="POST" >
+      <fieldset>
+        <div class="control-group">
+            <input type="text" class="input-xlarge" name="user.email" placeholder="Email">
+            <span class="help-inline"></span>
+        </div>
+        <div class="control-group">
+            <input type="text" class="input-xlarge" name="user.firstname" placeholder="Firstname">
+            <span class="help-inline"></span>
+        </div>
+        <div class="control-group">
+            <input type="text" class="input-xlarge" name="user.lastname" placeholder="Lastname">
+            <span class="help-inline"></span>
+        </div>
+        <div class="control-group">
+            <input type="password" class="input-xlarge" name="user.password" placeholder="Password">
+            <span class="help-inline"></span>
+        </div>
+        <div class="control-group">
+          	<select id="user-roles" class="input-xlarge select2Large" name="user.role.name">
+                </select>
+            <span class="help-inline"></span>
+        </div>
+      </fieldset>
+    </form>
+  </div>  
+  <div class="modal-footer">
+    <a href="#" class="btn" data-dismiss="modal">Cancel</a>
+    <a id="createBtn" href="#" class="btn btn-primary">Create</a>
+  </div>  
+</div>
+
+#{deleteDialog type:'webuser' /}

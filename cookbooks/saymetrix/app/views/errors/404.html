@@ -1,0 +1,26 @@
+#{if play.mode.name() == 'DEV'}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Not found</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=${_response_encoding}"/>    
+    </head>
+    <body>
+            #{404 result /}
+    </body>
+</html>
+#{/if}
+#{else}
+    #{extends 'errors/layout.html' /}
+    <h1>Sorry, that page<br/>doesn&rsquo;t exist&#33;</h1>
+    <br/>
+    <p>It appears the page you were looking for doesn&apos;t exist anymore or might have been moved. If the problem persists, please contact us at <a href="mailto: support@danutech.com?subject=404 ${result}" class="contact">support@danutech.com</a></p>
+    <p>
+        #{if play.Play.id.contains('vfie')}
+        <a href="@{Incidents.index()}" class="btn btn-inverse btn-large">Back to SmartFeedback</a>
+        #{/if}
+        #{else}
+        <a href="@{Incidents.index()}" class="btn btn-inverse btn-large">Back to SayMetrix</a>
+        #{/else}
+    </p>
+#{/else}

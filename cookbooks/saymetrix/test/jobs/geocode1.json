@@ -1,0 +1,240 @@
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "N77",
+               "short_name" : "N77",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Laois",
+               "short_name" : "Laois",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Laois",
+               "short_name" : "Laois",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Ireland",
+               "short_name" : "IE",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "N77, Co. Laois, Ireland",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 53.0019350,
+                  "lng" : -7.30474960
+               },
+               "southwest" : {
+                  "lat" : 52.99561240,
+                  "lng" : -7.30786410
+               }
+            },
+            "location" : {
+               "lat" : 52.99865699999999,
+               "lng" : -7.305637699999999
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 53.0019350,
+                  "lng" : -7.30474960
+               },
+               "southwest" : {
+                  "lat" : 52.99561240,
+                  "lng" : -7.30786410
+               }
+            }
+         },
+         "types" : [ "route" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Ballycarnan",
+               "short_name" : "Ballycarnan",
+               "types" : [ "neighborhood", "political" ]
+            },
+            {
+               "long_name" : "Laois",
+               "short_name" : "Laois",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Laois",
+               "short_name" : "Laois",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Ireland",
+               "short_name" : "IE",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Ballycarnan, Co. Laois, Ireland",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 53.00735330,
+                  "lng" : -7.27832830
+               },
+               "southwest" : {
+                  "lat" : 52.98741440,
+                  "lng" : -7.31158980
+               }
+            },
+            "location" : {
+               "lat" : 52.99817930,
+               "lng" : -7.290850300000001
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 53.00735330,
+                  "lng" : -7.27832830
+               },
+               "southwest" : {
+                  "lat" : 52.98741440,
+                  "lng" : -7.31158980
+               }
+            }
+         },
+         "types" : [ "neighborhood", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Laois",
+               "short_name" : "Laois",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Laois",
+               "short_name" : "Laois",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Ireland",
+               "short_name" : "IE",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Laois, Co. Laois, Ireland",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 53.21565220,
+                  "lng" : -6.93211550
+               },
+               "southwest" : {
+                  "lat" : 52.78126930,
+                  "lng" : -7.73464950
+               }
+            },
+            "location" : {
+               "lat" : 52.9942950,
+               "lng" : -7.332300699999999
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 53.21565220,
+                  "lng" : -6.93211550
+               },
+               "southwest" : {
+                  "lat" : 52.78126930,
+                  "lng" : -7.73464950
+               }
+            }
+         },
+         "types" : [ "administrative_area_level_2", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Laois",
+               "short_name" : "Laois",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Ireland",
+               "short_name" : "IE",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Co. Laois, Ireland",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 53.21565220,
+                  "lng" : -6.93211550
+               },
+               "southwest" : {
+                  "lat" : 52.78126930,
+                  "lng" : -7.73464950
+               }
+            },
+            "location" : {
+               "lat" : 52.99093250,
+               "lng" : -7.38698940
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 53.21565220,
+                  "lng" : -6.93211550
+               },
+               "southwest" : {
+                  "lat" : 52.78126930,
+                  "lng" : -7.73464950
+               }
+            }
+         },
+         "types" : [ "administrative_area_level_1", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Ireland",
+               "short_name" : "IE",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Ireland",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 55.38850,
+                  "lng" : -5.994700099999999
+               },
+               "southwest" : {
+                  "lat" : 51.42193770,
+                  "lng" : -10.669580
+               }
+            },
+            "location" : {
+               "lat" : 53.412910,
+               "lng" : -8.243890
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 55.386710,
+                  "lng" : -5.994710
+               },
+               "southwest" : {
+                  "lat" : 51.42219550,
+                  "lng" : -10.66945010
+               }
+            }
+         },
+         "types" : [ "country", "political" ]
+      }
+   ],
+   "status" : "OK"
+}

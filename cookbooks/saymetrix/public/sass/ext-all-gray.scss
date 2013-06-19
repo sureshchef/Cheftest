@@ -1,0 +1,889 @@
+/* Gray EXT Theme Variables
+--------------------------------------------- */
+$theme-name: 'gray';
+$base-color: #eee;
+$neutral-color: #eeeeee;
+
+//core
+$font-family: arial,verdana,sans-serif !default;
+$font-size  : 13px !default;
+
+$grid-header-background-color: adjust-color($neutral-color, $hue: 0deg, $saturation: 0%, $lightness: -16.078%);
+$grid-header-background-gradient: 'grid-header';
+
+
+//panel
+$panel-border-color: #D0D0D0;
+$panel-header-color: #000;
+$panel-header-padding: 8px;
+$panel-frame-background-color: #f1f1f1;
+$panel-header-inner-border: false;
+$panel-header-background-color:$grid-header-background-color;
+$panel-header-background-gradient:$grid-header-background-gradient;
+
+//window
+$window-base-color: #fff;
+$window-border-color: #999;
+$window-inner-border-color: transparent;
+$window-background-color: #fff;
+$window-background-color: #fff;
+$window-header-font-size: 24px;
+$window-header-line-height: 30px;
+$window-header-color: #333;
+
+//menu
+$menu-item-active-background-color: darken(#f3f3f3, 5);
+$menu-item-active-border-color: #9d9d9d;
+
+//datepicker
+$datepicker-header-background-color: #6f6f6f;
+$datepicker-border-color: #585858;
+$datepicker-th-background-color: #e9e9e9;
+$datepicker-selected-item-background-color: #d8d8d8;
+$datepicker-item-hover-background-color: transparent;
+
+//progress bar
+$progress-border-color: #8e8e8e;
+$progress-background-color: #f1f1f1;
+$progress-bar-background-color: #ababab;
+
+//tips
+$tip-base-color: rgba(0,0,0,0.6);
+$tip-body-color: #fff;
+$tip-body-font-size: 11px;
+$tip-body-padding: 0 2px;
+
+//grid
+$grid-header-over-border-color: darken($base-color, 3);
+$grid-header-line-height: 17px;
+$grid-header-padding: 8px;
+$grid-row-cell-alt-background:#f9f9f9;
+$grid-row-cell-over-background-color: whiteSmoke;
+$grid-row-cell-selected-background-color: #D9EDF7; //eee
+$grid-row-cell-selected-border-style: solid;
+$grid-row-cell-selected-border-color: #ddd;
+$grid-row-wrap-border-color: #ddd;
+$grid-row-cell-border-width: 0 1px 1px 0;
+$grid-cell-inner-padding-top: 8px;
+$grid-cell-inner-padding-horizontal: $grid-cell-inner-padding-top;
+$grid-cell-inner-padding-bottom: $grid-cell-inner-padding-top;
+
+//toolbar
+$toolbar-background-color: #eaeaea;
+$toolbar-background-gradient: null;
+$toolbar-separator-color: #aca899;
+$toolbar-text-color: #000;
+$toolbar-vertical-spacing: 7px;
+
+//btn group
+$btn-group-background-color: #f0f0f0;
+$btn-group-header-background-color: #dfdfdf;
+$btn-group-border-color: #d0d0d0;
+$btn-group-header-color: #666;
+$btn-group-inner-border-color: #ececec;
+
+//form
+$fieldset-header-color: #333;
+
+$boundlist-border-color: #b5b8c8;
+
+//acordion
+$accordion-header-background-color: #e5e5e5;
+
+//tabs
+$tab-base-color: #eaeaea;
+$tab-color: #828282;
+$tab-color-active: #333333;
+$tab-height: 30px;
+$tabbar-top-body-padding: 5px 0 1px;
+$tabbar-padding-sides: 10px;
+$tab-inner-border-color: transparent;
+$tabbar-strip-height:0;
+$tabbar-base-color:$grid-header-background-color;
+$tabbar-background-gradient:$grid-header-background-gradient;
+
+$tab-background-gradient: color-stops(#ffffff, #f7f7f7);
+$tab-background-gradient-over: 'tab-over' !default;
+$tab-background-gradient-active: color-stops(#ffffff, #eaeaea);
+$tab-background-gradient-disabled: 'tab-disabled' !default;
+
+//buttons
+$button-default-base-color: #f8f8f8;
+$button-default-base-color-over: #f3f3f3;
+$button-default-base-color-focus: $button-default-base-color-over;
+$button-default-base-color-pressed: #d6d6d6;
+$button-default-base-color-disabled: adjust-color($base-color, $hue: 0deg, $saturation: -55.556%, $lightness: 12.745%) !default; //F7F7F7
+
+$button-default-border-color: #bbbbbb;
+$button-default-border-color-over: #9d9d9d;
+$button-default-border-color-focus: $button-default-border-color-over;
+$button-default-border-color-pressed: $button-default-border-color-over;
+$button-default-border-color-disabled: adjust-color($button-default-base-color-disabled, $hue: 0deg, $saturation: 0%, $lightness: -8.627%) !default;
+
+$button-default-background-gradient: 'matte';
+$button-default-background-gradient-over: 'matte';
+$button-default-background-gradient-focus: 'matte';
+$button-default-background-gradient-pressed: 'matte-reverse';
+$button-default-background-gradient-disabled: 'matte';
+
+$button-default-background-gradient-color-stops: null;
+$button-default-background-gradient-color-stops-over: null;
+$button-default-background-gradient-color-stops-focus: null;
+$button-default-background-gradient-color-stops-pressed: null;
+$button-default-background-gradient-color-stops-disabled: null;
+
+
+$button-toolbar-base-color: $button-default-base-color;
+
+$button-toolbar-border-color: transparent !default;
+$button-toolbar-border-color-over: $button-default-border-color-over;
+$button-toolbar-border-color-focus: $button-default-border-color-focus;
+$button-toolbar-border-color-pressed: $button-default-border-color-pressed;
+$button-toolbar-border-color-disabled: $button-default-border-color-disabled;
+
+$button-toolbar-background-color: transparent !default;
+$button-toolbar-background-color-over: $button-default-base-color-over;
+$button-toolbar-background-color-focus: $button-default-base-color-focus;
+$button-toolbar-background-color-pressed: $button-default-base-color-pressed;
+$button-toolbar-background-color-disabled: transparent;
+
+$button-toolbar-background-gradient: null;
+$button-toolbar-background-gradient-over: 'matte';
+$button-toolbar-background-gradient-focus: 'matte';
+$button-toolbar-background-gradient-pressed: 'matte-reverse';
+$button-toolbar-background-gradient-disabled: null;
+
+$button-toolbar-background-gradient-color-stops: null;
+$button-toolbar-background-gradient-color-stops-over: null;
+$button-toolbar-background-gradient-color-stops-focus: null;
+$button-toolbar-background-gradient-color-stops-pressed: null;
+$button-toolbar-background-gradient-color-stops-disabled: null;
+
+
+/* SCSS Variables and Imports
+--------------------------------------------- */
+$splitterColor: #ebebeb;
+
+$prefix: 'x-';
+
+$include-ff: true;
+$include-chrome: true;
+$include-safari: true;
+$include-opera: true;
+$include-ie: true;
+
+$compile-all: true;
+$supports-border-radius: true;
+$supports-gradients: true;
+
+//All the imports that we need for our theme.
+@import "compass/css3";
+@import "blueprint/typography";
+
+$include-default: true !default;
+$include-default-uis: true !default;
+
+@import 'ext4/default/functions';
+@import 'ext4/default/variables';
+@import 'ext4/default/mixins';
+
+//core
+@import 'ext4/default/core';
+
+//layout
+@import 'ext4/default/layout/layout';
+
+//utils
+@import 'ext4/default/util/tool';
+@import 'ext4/default/util/messagebox';
+@import 'ext4/default/util/splitter';
+@import 'ext4/default/util/resizable';
+@import 'ext4/default/util/dragdrop';
+@import 'ext4/default/util/scroller';
+@import 'ext4/default/util/focus';
+
+//widgets
+@import 'ext4/default/widgets';
+
+@if $scope-reset-css {
+    .#{$prefix}reset {
+        @if $include-default {
+        	@include extjs-boundlist;
+        	@include extjs-button;
+        	@include extjs-btn-group;
+        	@include extjs-menu;
+        	@include extjs-grid;
+        	@include extjs-form;
+        	    @include extjs-form-field;
+        	    @include extjs-form-fieldset;
+        	    @include extjs-form-file;
+        	    @include extjs-form-checkboxfield;
+        	    @include extjs-form-checkboxgroup;
+        	    @include extjs-form-triggerfield;
+        	@include extjs-panel;
+        	@include extjs-qtip;
+        	@include extjs-progress;
+        	@include extjs-toolbar;
+            @include extjs-window;
+            @include extjs-messagebox;
+            @include extjs-tabbar;
+        	@include extjs-tab;
+        	@include extjs-drawcomponent;
+        	@include extjs-viewport;
+        }
+
+        @include extjs-dragdrop;
+        @include extjs-resizable;
+        @include extjs-splitter;
+        @include extjs-layout;
+        @include extjs-tool;
+        @include extjs-scroller;
+        
+        @include extjs-html;
+    }
+
+    @include extjs-reset-extras;
+}
+@else {
+    @if $include-default {
+    	@include extjs-boundlist;
+    	@include extjs-button;
+    	@include extjs-btn-group;
+    	@include extjs-menu;
+    	@include extjs-grid;
+    	@include extjs-form;
+    	    @include extjs-form-field;
+    	    @include extjs-form-fieldset;
+    	    @include extjs-form-file;
+    	    @include extjs-form-checkboxfield;
+    	    @include extjs-form-checkboxgroup;
+    	    @include extjs-form-triggerfield;
+    	@include extjs-panel;
+    	@include extjs-qtip;
+    	@include extjs-progress;
+    	@include extjs-toolbar;
+        @include extjs-window;
+        @include extjs-messagebox;
+        @include extjs-tabbar;
+    	@include extjs-tab;
+    	@include extjs-drawcomponent;
+    	@include extjs-viewport;
+    }
+
+    @include extjs-dragdrop;
+    @include extjs-resizable;
+    @include extjs-splitter;
+    @include extjs-layout;
+    @include extjs-tool;
+    @include extjs-scroller;
+    
+    @include extjs-html;
+}
+
+// This line changes the location of your images when creating UIs to be relative instead of within the ExtJS directory.
+// You MUST set this to true/string value if you are creating new UIs + supporting legacy browsers.
+// This only applies to new UIs. It does not apply to default component images (i.e. when changing $base-color)
+// The value can either be true, in which case the image path will be "../images/"
+// or a string, of where the path is
+$relative-image-path-for-uis: true; // defaults to "../images/" when true
+$include-missing-images: true;
+
+
+/* SCSS Mixins
+--------------------------------------------- */
+@mixin content-box {
+    box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    -webkit-box-sizing: content-box !important;
+}
+
+@mixin custom-border-radius($topLeft, $topRight, $bottomRight, $bottomLeft) {
+    -moz-border-radius-topleft: $topLeft;
+    -webkit-border-top-left-radius: $topLeft;
+    -ms-border-top-left-radius: $topLeft;
+    -o-border-top-left-radius: $topLeft;
+    border-top-left-radius: $topLeft;
+    
+    -moz-border-radius-topright: $topRight;
+    -webkit-border-top-right-radius: $topRight;
+    -ms-border-top-right-radius: $topRight;
+    -o-border-top-right-radius: $topRight;
+    border-top-right-radius: $topRight;
+    
+    -moz-border-radius-bottomright: $bottomRight;
+    -webkit-border-bottom-right-radius: $bottomRight;
+    -ms-border-bottom-right-radius: $bottomRight;
+    -o-border-bottom-right-radius: $bottomRight;
+    border-bottom-right-radius: $bottomRight;
+    
+    -moz-border-radius-bottomleft: $bottomLeft;
+    -webkit-border-bottom-left-radius: $bottomLeft;
+    -ms-border-bottom-left-radius: $bottomLeft;
+    -o-border-bottom-left-radius: $bottomLeft;
+    border-bottom-left-radius: $bottomLeft;
+}
+
+/* Splitters
+--------------------------------------------- */
+.x-splitter-vertical {
+    background: $splitterColor;
+    cursor: col-resize;
+    &:hover {
+        background: darken($splitterColor, 30%)
+    }
+}
+
+#bottomBar-splitter {
+    background: $splitterColor;
+    cursor: row-resize;
+    &:hover {
+        background: darken($splitterColor, 10%)
+    }
+}
+
+
+/* Info Bubbles and Cluster Hovers
+--------------------------------------------- */
+//Shared CSS
+.infoBubbleInner, .clusterHover, .clusterHeader {
+    @include custom-border-radius(6px, 6px, 6px, 6px);
+    overflow: hidden;
+}
+
+.infoBubbleHeader, .clusterHeader {
+    background-color: #fff;
+    padding: 12px 8px;
+    h3 {
+        color: #333;
+        line-height:18px;
+    }
+}
+
+.infoBubbleFooter, .clusterFooter {
+    background-color: #f7f7f7;
+    color: #666;
+    font-size:11px;
+    text-shadow:0px 1px #FFF;
+    border-top:1px solid #eee;
+    padding: 8px;
+}
+    
+//Info bubbles
+.infoBubbleInner {
+    background-color: transparent;
+    font-family: Helvetica Neue, Helvetica, arial;
+    @include content-box;
+}
+
+//Cluster hovers
+.clusterHover {
+    margin-top: -40px;
+    margin-left: 55px;
+    
+    background-color: #f7f7f7;
+    border: 1px solid #bbb;
+    
+    color: #333; 
+    font-family: Helvetica Neue, Helvetica, arial;
+    text-align: left;
+    
+    display: none;
+    position: relative;
+    z-index: 100;
+    
+    -moz-box-shadow:6px -2px 2px rgba(33,33,33,0.4);
+    -webkit-box-shadow:6px -2px 2px rgba(33,33,33,0.4);
+    box-shadow:6px -2px 2px rgba(33,33,33,0.4);
+    
+    @include content-box;
+}
+
+.clusterHeader {
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:0;
+}
+
+.clusterFooter table {
+    line-height:18px;
+    font-weight: normal;
+}
+
+.voiceContainer, .dataContainer, .otherContainer {
+    float: left;
+    margin-bottom:8px;
+}
+
+.voiceContainer {
+    margin-right: 10px;
+}
+
+.clusterFooter .count {
+    text-align: right;
+    padding-right: 1px;
+}
+
+.cluster:hover div.clusterHover { 
+    display: block; 
+    position: absolute;
+}
+
+
+/* Fixes for things Ext and Bootstrap break
+--------------------------------------------- */
+#map * {
+    @include content-box;
+}
+
+#map img {
+    max-width: none;
+}
+
+.navbar * {
+    @include content-box;
+}
+
+.navbar {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+footer {
+    display: none;
+}
+
+.x-message-box input {
+    background-image: none;
+    width:92% !important;
+    @include content-box;
+}
+
+/* Overrides of default EXT theme items
+--------------------------------------------- */
+//Borders
+#bottomBar-body, #tabs-body, #details_header {
+    border-top: none;
+}
+
+#list .x-docked-top, #details_header, #details-body {
+    border-right: none;
+}
+
+#list-body {
+    border-bottom: none;
+}
+#bottomBar-body, #list .x-docked-top, #list-body {
+    border-left: none;
+}
+
+//Tab bar area
+.x-tab-default-over { //hover state
+    background-image: none;
+}
+
+.x-tab-default-over button { //hover state
+    color: #333;
+}
+
+#resultsCount, #editResultsCount {
+    top: 2px !important;
+    padding-right:4px;
+}
+
+//Message boxes for saving etc.
+.x-window-header-default-docked-top {
+    border-bottom-width: 1px !important;
+    border-bottom-color: #EEE;
+    padding: 9px 15px;
+}
+
+.x-window-header-default-docked-top .x-tool {
+    top: 0 !important;
+}
+
+.x-message-box .x-form-display-field {
+    margin-bottom:4px;
+}
+
+.x-message-box .x-toolbar-footer {
+    background: whitesmoke;
+    left: 0 !important;
+    bottom: 0;
+    width: 100% !important;
+    border-top: 1px solid #DDD !important;
+    -webkit-box-shadow: inset 0 1px 0 white;
+    -moz-box-shadow: inset 0 1px 0 #ffffff;
+    box-shadow: inset 0 1px 0 white;
+    @include custom-border-radius(0, 0, 6px, 6px);
+}
+
+.x-message-box .x-toolbar-footer .x-btn {
+    padding-top: 4px;
+    padding-bottom: 4px; 
+}
+
+.x-message-box .x-message-box-question {
+    visibility: hidden; 
+}
+
+.x-message-box .x-container.x-box-item.x-container-default {
+    left: 2px !important;
+}
+    
+.x-tool-close {
+    display:none;
+}
+    
+/* Search form
+--------------------------------------------- */
+.input-append input {
+    margin-bottom:9px;
+}
+
+//New search tab
+//Ext takes content from these divs, so need to hide them so they don't show up
+#searchFormDiv, #filterListDiv {
+    display: none;
+}
+
+.search-form label {
+    font-size:12px !important;
+    line-height:15px !important;
+    color: #888;
+}
+
+/* CSS to reserve 38px on the right side of each input for error handling */
+.search-form .control-container {   
+    position: relative;
+}
+
+.search-form .control-group {
+    margin-right:38px;
+}
+
+.search-form input, .search-form select {   
+    width:100%;
+    color: #000;
+}
+
+.search-form .error-container { 
+    position: absolute;
+    top:27px;
+    right:0px;
+}
+
+.endError { 
+    top:69px !important;
+}
+
+.error-icon {   
+    display: inline-block;
+    font-size:14px;
+    width:27px;
+}
+
+.error-icon .icon-warning-sign {    
+    background-image: url("../images/glyphicons-halflings-red.png");
+    margin-left: 4px;
+}
+
+/* Additional CSS for date inputs (which need room for the appended buttons */
+.search-form .input-append {    
+    width:100%;
+}
+
+.search-form .control-group .input-container {  
+    margin-right:28px;
+}
+
+.search-form .input-append .add-on {    
+    position: absolute;
+    right: 29px;
+    top: 20px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-top-right-radius: 4px;
+    border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-bottom-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.search-form .d2 .add-on, .search-form .d4 .add-on {    
+    top:62px;
+}
+
+/* misc fixes */
+.search-form input, .search-form select, .search-form span {    
+    @include content-box;
+}
+
+.search-form input, .search-form select, .search-form .input-prepend .add-on, .search-form .input-append .add-on {  
+    border-color: #BBB;
+}
+
+/* tool tip used for the errors */
+.tooltip.in {   
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.tooltip.right .tooltip-arrow { 
+    border-right: 5px solid #B94A48;
+}
+
+.tooltip-inner {    
+    border: 1px solid #B94A48;
+    color: #B94A48;
+    background-color: #F2DEDE;
+}
+
+//Filter tab
+#filterContainer .table {   
+    table-layout: fixed;
+}
+
+#filterContainer .filterName {  
+    width:100%;
+    height:37px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#filterContainer .actions { 
+    width:120px;
+}
+
+
+/* List view
+--------------------------------------------- */
+.x-column-header {
+    font-weight: bold;
+}
+
+.x-grid-empty {
+    height:100%;
+    padding: 81px 0 0;
+    text-align: center;
+    margin: -1px -1px 0 0;
+    font-family: arial, verdana, sans-serif;
+}
+
+.grid-icon {
+    text-align: center;
+}
+
+/* Detail view
+--------------------------------------------- */
+#details-body {
+    height:100% !important;
+}
+
+#details #incident-detail {
+    background-color: #f2f2f2;
+    padding:19px;
+}
+
+#details #holder {
+    height:100% !important;
+}
+
+#details #holder h3 {
+    width:110px;/* 120 */
+    height:60px;/* 60 */
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin: -55px 0 0 -50px;/* 30+19px(padding-top), 60 */
+}
+
+#details .table td {
+    min-width: 92px;
+}
+
+/* Detail view placholder and List View empty message
+--------------------------------------------- */
+//place holder styling
+#details #holder, .x-grid-empty {
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, #eeeeee, #e2e2e2);
+    background-image: -webkit-linear-gradient(top, #eeeeee, #e2e2e2);
+    background-image: -moz-linear-gradient(top, #eeeeee, #e2e2e2);
+    background-image: -o-linear-gradient(top, #eeeeee, #e2e2e2);
+    background-image: -ms-linear-gradient(top, #eeeeee, #e2e2e2);
+    background-image: linear-gradient(top, #eeeeee, #e2e2e2);
+}
+
+#details #holder h3, .x-grid-empty {
+    text-shadow:1px 1px #FFF;
+    color: #999;
+    font-size:20px;
+    line-height:30px;
+    font-weight: normal;
+}
+
+/* Custom Layer button for the Map
+--------------------------------------------- */
+#map .controlUI {
+    width: 75px;
+    background-color: #FFFFFF;
+    border: 1px solid #717B87;
+    -webkit-box-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+    
+    .controlText {
+        cursor: pointer;
+        font-family: arial,sans-serif;
+        font-size: 13px;
+        text-align: left;
+        padding: 1px 6px 1px 11px;
+    }
+    
+    .dropdown {
+        height: 0px;
+        overflow: hidden;
+        overflow-y: scroll;
+        border-top: 1px solid #c9c9c9;
+    }
+    
+    .dropdownExpander {
+        display: none;
+        text-align: center;
+        &:hover {
+            background-color: #EBEBEB;
+        }
+    }
+    
+    .showing {
+        display: block;
+    }
+    
+    &:hover {
+        .controlText {
+            background-image: -webkit-linear-gradient(top, white, #E6E6E6);
+            background-image: -moz-linear-gradient(top, white, #E6E6E6);
+            filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#FFFFFF', EndColorStr='#E6E6E6'); /* IE6,IE7 */
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FFFFFF', EndColorStr='#E6E6E6')"; /* IE8 */
+        }
+    }
+}
+
+.layerContainer {
+    display: none;
+    background-color: white;
+    width: 175px;
+    height: 26px;
+    cursor: pointer;
+    border-bottom: 1px solid #EBEBEB;
+    line-height: 26px;
+    clear: both;
+    overflow: hidden;
+    
+    .layerIcon {
+        display: inline-block;
+        float: left;
+        margin: 7px 6px 0 6px;
+        height: 11px;
+        width: 13px;
+        line-height: 8px;
+    }
+
+    .layerOptionIcon {
+        @extend .layerIcon;
+        margin-top: 4px;
+    }
+    
+    .layerLabel {
+        width: 130px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    
+    .layerOptionLabel {
+        width: 130px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    
+    &:hover {
+        background-color: #EBEBEB;
+    }
+}
+
+.groupContainer .layerLabel {
+    width: 115px;
+    float: left;
+}
+
+.layerGroupDropdown {
+    height: 27px;
+    clear: both;
+ 
+    .layerOptionContainer {
+        width: 156px;
+        height: 18px;
+        padding-left:18px;
+        background: none;
+        border-bottom: none;
+        font-size: 11px;
+        line-height: 18px;
+
+        cursor: pointer;
+        clear: both;
+        overflow: hidden;
+        
+        &:hover .layerOptionIcon {
+            background: no-repeat url(//maps.gstatic.com/mapfiles/mv/imgs8.png) -18px -54px;
+            width: 13px;
+            height: 11px;
+        }
+    }
+}
+
+.layerContainerInner {
+    height: 27px;
+    clear: both;
+    
+    .layerDropIcon {
+        padding: 9px 22px 0 5px;
+        width: 8px;
+        height: 8px;
+        float: right;
+        display: none;
+        
+        .arrow-down {
+            display: none;
+            margin-left: 0;
+            background: no-repeat url('//maps.gstatic.com/mapfiles/hpimgs28.png') -125px 0px;
+            height: 4px;
+            width: 7px;
+            padding-top: 1px;
+        }
+
+        .arrow-left {
+            display: none;
+            margin-left: 0;
+            background: no-repeat url('//maps.gstatic.com/mapfiles/hpimgs28.png') -81px -26px;
+            height: 7px;
+            width: 4px;
+        }
+    }
+}
+
+layerContainer:hover .layerIcon, layerOptionContainer:hover .layerOptionIcon {
+    background: no-repeat url(//maps.gstatic.com/mapfiles/mv/imgs8.png) -18px -54px;
+    width: 13px;
+    height: 11px;
+}
+
+.active .layerIcon, .layerOptionContainer.active .layerOptionIcon {
+    background: no-repeat url(//maps.gstatic.com/mapfiles/mv/imgs8.png) -52px -44px !important;
+}
+
+.active .layerLabel, .layerGroupDropdown .active .layerOptionLabel {
+    font-weight: bold;
+}
+
+
+

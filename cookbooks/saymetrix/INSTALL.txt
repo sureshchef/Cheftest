@@ -1,0 +1,41 @@
+1. What 3rd party software is used by SayMetrix?
+
+To generate a detailed report of the license details for 3rd party
+dependencies run the following command in the project root:
+$ mvn project-info-reports:dependencies
+
+This will generate a file (target/site/dependencies.html) containing the
+dependency details.
+
+Note that some dependencies may not include license details - these are
+included below for completeness.
+
+- JPA 2.0 API - CDDL v1.0
+  http://www.sun.com/cddl/cddl.html
+- AntLR - Public Domain
+  http://www.antlr2.org/license.html
+- Javassist - MPL, GPL and the Apache License
+  http://www.csg.ci.i.u-tokyo.ac.jp/~chiba/javassist/
+- dom4j - BSD Style
+  http://dom4j.sourceforge.net/dom4j-1.6.1/license.html
+- Play! Framework excel module - MIT
+  https://github.com/greenlaw110/play-excel/blob/master/MIT-LICENSE.txt
+- jamon - BSD Style
+  http://jamonapi.sourceforge.net/#JAMonLicense
+- jaxen - Apache-style open source
+  http://jaxen.codehaus.org/license.html
+- org.eclipse.jdt.core
+  Eclipse Public License v1.0 - http://www.eclipse.org/org/documents/epl-v10.html
+
+Additionally, the following dependencies are covered by the Apache Software
+License, Version 2.0 - http://www.apache.org/licenses/LICENSE-2.0.txt
+- Play! DocViewer Module
+- Play! Framework
+- Play! TestRunner Module
+- Selenium RC Java Client Driver
+- commons-collections
+- jj-imaging
+- jj-simplecaptcha
+- jj-textile
+- jj-wikitext
+- jsr107cache

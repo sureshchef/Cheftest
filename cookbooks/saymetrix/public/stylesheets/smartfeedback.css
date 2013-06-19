@@ -1,0 +1,22 @@
+/*login screen*/
+.welcome-text h1 {
+    font-size: 51px;
+}
+
+.no-rgba .footer {
+    color: #BB4444;
+}
+
+.no-rgba .secure .footer ul li a,
+.no-rgba .errorCode .footer ul li a {
+    color: #DD9999;
+}
+
+.no-rgba .secure .footer ul li a:hover,
+.no-rgba .errorCode .footer ul li a:hover {
+    color: #FFFFFF;
+}
+
+.errorCode {
+    background-color: #AA0000;
+}

@@ -1,0 +1,182 @@
+/* Extra styling rules for IE across all pages 
+ * (Except for the login page, as it has a seperate style)
+--------------------------------------------- */
+
+/* Incidents Page
+--------------------------------------------- */
+.ie7 .search-form .input-append .add-on {
+    top: 21px;
+}
+
+.ie7 .search-form .d2 .add-on, .ie7 .search-form .d4 .add-on {    
+    top:65px;
+}
+
+.ie7 .search-form select {  
+    border: 1px solid #BBB;
+}
+
+.ie7 .datepicker table {
+    width: auto;
+}
+
+.ie78 #details-body, .ie78 #holder {
+    background-color: #eee;
+}
+
+.ie78 .x-grid-empty {
+    background-color: #eee;
+}
+
+.x-nlg .x-column-header-over,
+.x-nlg .x-column-header-sort-ASC,
+.x-nlg .x-column-header-sort-DESC {
+    background-image: none;
+    background-color: #fff;
+}
+
+.x-nlg .x-tab-bar {
+    background-image: none;
+    background-color: #E3E4E6;
+}
+
+.ie7 .cluster:hover {
+    z-index: 101;
+}
+
+.ie8 .controlUI {
+    margin-top: -1px;
+}
+
+.ie8 .controlText {
+    padding: 0 5px 0 10px;
+}
+
+.ie78 .controlUI:hover .controlText {
+    zoom: 1;
+}
+
+.ie7 .incidentModal .controls, .ie7 .eventModal .controls, .ie7 .viewEventsModal .controls {
+    margin-left: 0px;
+}
+
+.ie7 #create-location .form-horizontal :first-child.controls, .ie7 #event-location .form-horizontal :first-child.controls {
+    padding-left: 0px;
+}
+
+.ie7 #create-details .input-append .add-on, .ie7 #event-details .input-append .add-on, .ie7 #view-events .input-append .add-on {
+    padding-right: 0px;
+}
+
+.ie7 .create-date, .ie7 #event-start-date, .ie7 #event-end-date, .ie7 #view-events-date {
+    width: 123px;
+    margin-right: 7px;
+}
+
+.ie7 .create-date .add-on, .ie7 #event-start-date .add-on, .ie7 #event-end-date .add-on, .ie7 #view-events-date .add-on,
+.ie7 .bootstrap-timepicker .add-on {
+    top: 1px;
+}
+
+.ie7 .bootstrap-timepicker {
+    z-index: 1000;
+}
+
+.ie7 #create-location .input-prepend .add-on, .ie7 #event-location .input-prepend .add-on {
+    padding-right: 3px;
+}
+
+.ie7 .form-horizontal :first-child.controls {
+    padding-left: 120px;
+}
+
+.ie7 #create-subscriber hr, .ie7 #view-events hr {
+    margin-top: 0px;
+}
+
+.ie7 .incidentModal .modal-body {
+    height: 364px !important;
+}
+
+.ie7 .eventModal form, .ie7 .viewEventsModal form {
+    margin-bottom: 0px;
+}
+
+.ie7 #view-events-filter-btn {
+    vertical-align: top;
+    margin-top: 1px;
+}
+
+/* Reports Page
+--------------------------------------------- */
+.ie78 .btn-group .btn {
+    border-width: 1px;
+    border-color: #c5c5c5;
+}
+
+.ie7 .btn-group .btn {
+    background-color: #f7f7f7;
+}
+
+.ie7 .btn-group .active.btn {
+    background-color: #cccccc;
+}
+
+.ie7 .btn-group .btn:hover {
+    background-color: #d9d9d9;
+}
+
+.ie7 #date-range-field a.btn {
+    padding-right: 8px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.ie7 #date-range-field input {
+    top: -1px;
+}
+
+.ie7 #date-range {
+    z-index: 999;
+}
+
+.ie7 #datepicker-calendar .preset-dates li {
+    display: inline !important;
+}
+
+.ie7 #datepicker-calendar .preset-dates li a {
+    margin-bottom: 4px;
+}
+
+.ie7 .print-btn a.btn {
+    padding-right: 6px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.ie7 .select2-search {
+    width: auto;
+    padding-right: 31px;
+}
+
+.ie7 .select2-search input {
+    background-image: none;
+}
+
+.ie7 #stats ul li {
+    float: left;
+}
+
+.ie7 .legend h3, .ie7 .legend h4 {
+    display: inline;
+}
+
+/* Admin Pages
+--------------------------------------------- */
+.ie7 #footer-inner {
+    width: auto;
+}
+
+.ie7 .footer-twitter, .ie7 .footer-blog {
+    padding-top: 0;
+}

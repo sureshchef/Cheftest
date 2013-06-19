@@ -1,0 +1,25 @@
+#{extends 'main.html' /}
+#{set 'moreStyles'}
+  #{get 'moreStyles' /}
+#{/set}
+%{ minified = (play.Play.mode == play.Play.Mode.PROD) ? ".min" : "" }%
+#{set 'moreScripts'}
+#{get 'moreScripts' /}
+  #{press.script 'jquery.dataTables-1.9.2'+minified+'.js', compress:false /}
+#{/set}
+
+#{alertBox /}
+<div class="row-fluid">
+  <div class="span2">
+    <div id="settings-nav" class="well" style="padding: 8px 0;">
+      <ul class="nav nav-list">
+        <li class="nav-header">Settings</li>
+        %{ if(tab == null) {tab = 'password'} }%
+        <li #{if tab == "password"}class="active"#{/}><a href="@{Settings.index()}"><i class="icon-lock"></i> Password</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="span10">
+    #{doLayout /}
+  </div>
+</div>

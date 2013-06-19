@@ -1,0 +1,26 @@
+#{if play.mode.name() == 'DEV'}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Application error</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=${_response_encoding}"/>    
+    </head>
+    <body>
+            #{500 exception /}
+    </body>
+</html>
+#{/if}
+#{else}
+    #{extends 'errors/layout.html' /}
+    <h1>Oops&#33; Something<br/>went wrong.</h1>
+    <br/>
+    <p>it appears there has been an internal server error with the page you&apos;ve requested. Try refreshing the page, or if the problem persists, please contact us at <a href="mailto: support@danutech.com?subject=500 ${result}" class="contact">support@danutech.com</a></p>
+    <p>
+        #{if play.Play.id.contains('vfie')}
+        <a href="@{Incidents.index()}" class="btn btn-inverse btn-large">Back to SmartFeedback</a>
+        #{/if}
+        #{else}
+        <a href="@{Incidents.index()}" class="btn btn-inverse btn-large">Back to SayMetrix</a>
+        #{/else}
+    </p>
+#{/else}

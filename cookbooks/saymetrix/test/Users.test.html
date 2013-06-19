@@ -1,0 +1,116 @@
+%{
+play.test.Fixtures.deleteAllModels();
+play.test.Fixtures.load("../conf/initial-data-prod.yml");
+}%
+#{selenium 'Log in'}
+    clearSession()
+    open('/')
+    assertTitle('Login')
+    type('name=username', 'admin@danutech.com')
+    type('name=password', 'hello')
+    clickAndWait('id=signin')
+    assertTitle('Incidents')
+#{/selenium}
+    
+#{selenium 'Test creating a user successfully'}
+    open('/users')
+    click('link=Create')
+    waitForVisible('id=create')
+    assertVisible('id=create')
+    type('name=user.email', 'test@test.com')
+    type('name=user.firstname', 'TestFirstname')
+    type('name=user.lastname', 'TestLastname')
+    type('name=user.password', 'hello')
+    click('css=b')
+    mouseDown('//*[@id="s2id1"]/a/div/b')
+    mouseUp('//li[contains(@class,"select2-result")][1]')
+    click('id=createBtn')
+    waitForNotVisible('id=create')
+	assertNotVisible('id=create')
+#{/selenium}
+    
+#{selenium 'Test editing a user successfully'}
+    open('/users')
+    pause(1000)
+    click('xpath=(//a[contains(text(),"Edit")])[2]')
+    waitForVisible('id=create')
+    assertVisible('id=create')
+    type('name=user.email', 'TestupdateEmail@test.com')
+    type('name=user.password', 'TEST')
+    click('id=createBtn')
+    waitForNotVisible('id=create')
+	assertNotVisible('id=create')
+#{/selenium}
+    
+#{selenium 'Test deleting a user successfully'}
+     open('/users')
+    pause(1000)
+    click('//a[@data-id="admin@danutech.com"][2]')
+    waitForVisible('id=delete')
+    assertVisible('id=delete')
+    click('css=#delete > div.modal-footer > button.btn.btn-danger')
+    waitForNotVisible('id=delete')
+    assertNotVisible('id=delete')
+    waitForVisible('id=errorDialog')
+    assertVisible('id=errorDialog')
+    click('css=button.btn.btn-danger')
+    <!--verifyText('xpath=id('users')/x:tbody/x:tr[2]/x:td[1]', 'Account Manager2')-->
+#{/selenium}
+    
+#{selenium 'Test creating user with invalid email, then correcting it for successful completion'}
+    open('/users')
+    click('link=Create')
+    waitForVisible('id=create')
+    assertVisible('id=create')
+    type('name=user.email', 'test@notvaliddotcom')
+    type('name=user.firstname', 'TestFirstname')
+    type('name=user.lastname', 'TestLastname')
+    type('name=user.password', 'hello')
+    click('css=b')
+    mouseDown('//*[@id="s2id1"]/a/div/b')
+    mouseUp('//li[contains(@class,"select2-result")][1]')
+    click('id=createBtn')
+    assertVisible('id=create')
+    type('name=user.email', 'test@valid.com')
+    click('id=createBtn')
+    waitForNotVisible('id=create')
+	assertNotVisible('id=create')
+#{/selenium}
+    
+#{selenium 'Test creating user with existing email, then correcting it for successful completion'}
+    open('/users')
+    click('link=Create')
+    waitForVisible('id=create')
+    assertVisible('id=create')
+    type('name=user.email', 'test@valid.com')
+    type('name=user.firstname', 'TestFirstname')
+    type('name=user.lastname', 'TestLastname')
+    type('name=user.password', 'hello')
+    click('css=b')
+    mouseDown('//*[@id="s2id1"]/a/div/b')
+    mouseUp('//li[contains(@class,"select2-result")][1]')
+    click('id=createBtn')
+    assertVisible('id=create')
+    assertTextPresent('This email address is already in use')
+    type('name=user.email', 'test@unique.com')
+    click('id=createBtn')
+    waitForNotVisible('id=create')
+	assertNotVisible('id=create')
+#{/selenium}
+    
+#{selenium 'Test editing user changing status from WebUser to Admin'}
+    open('/users')
+    pause(1000)
+    click('xpath=(//a[contains(text(),"Edit")])[2]')
+    waitForVisible('id=create')
+    assertVisible('id=create')
+    type('name=user.password', 'hello')
+    click('css=b')
+    mouseDown('//*[@id="s2id1"]/a/div/b')
+    mouseUp('//li[contains(@class,"select2-result")][2]')
+    click('id=createBtn')
+    waitForNotVisible('id=create')
+	assertNotVisible('id=create')
+    verifyText('xpath=id('users')/x:tbody/x:tr[2]/x:td[3]', 'Administrator') 
+#{/selenium}
+    

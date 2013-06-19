@@ -1,0 +1,13 @@
+/* things to hide
+--------------------------------------------- */
+* {
+/*    -webkit-print-color-adjust: exact !important;*/
+}
+
+/* style changes
+--------------------------------------------- */
+table, tbody, .row-fluid, .no-break {
+    page-break-inside: avoid;
+    page-break-before: auto;
+    page-break-after: auto;
+}

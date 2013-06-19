@@ -1,0 +1,671 @@
+/* General Fixes
+--------------------------------------------- */
+html, body { height: 100%; }
+
+/* Navbar
+--------------------------------------------- */
+.navbar img {
+    float: left;
+    margin: 1px 30px 0 0;
+}
+
+.navbar img {
+    float: left;
+    padding-top: 3px;
+}
+
+.nav .icon-gray {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 8 */
+    filter: alpha(opacity=50); /* IE 5-7 */
+    -moz-opacity: 0.5; /* Mozilla */
+    -khtml-opacity: 0.5; /* Safari 1.x */
+    opacity: 0.5; /* Good browsers */
+}
+
+/*.nav .active .icon-gray, .nav a:hover .icon-gray {*/
+.nav .active .icon-gray {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; /* IE 8 */
+    filter: alpha(opacity=100); /* IE 5-7 */
+    -moz-opacity: 1.0; /* Mozilla */
+    -khtml-opacity: 1.0; /* Safari 1.x */
+    opacity: 1.0; /* Good browsers */
+}
+
+html, body { height: 100%; }
+
+/* Alerts used on admin pages
+--------------------------------------------- */
+.alert {
+    width:300px;
+    position:fixed;
+    left: 50%;
+    top: 40% !important;
+    margin-left: -150px;
+    margin-top: -40px; /* This should be half of the total height of your div */
+    z-index:1031;
+
+    -moz-box-shadow:3px 4px 2px rgba(33,33,33,0.4);
+    -webkit-box-shadow:3px 4px 2px rgba(33,33,33,0.4);
+    box-shadow:3px 4px 2px rgba(33,33,33,0.4);
+}
+
+#alertBox .title {
+    text-transform:capitalize;
+}
+
+/* Fixes for #create modals
+--------------------------------------------- */
+/* select2 fix for modal window */
+#create.modal {
+    overflow: inherit;
+}
+#create .modal-body {
+    overflow-y: inherit;
+}
+
+/* Admin pages
+--------------------------------------------- */
+h1 {
+    margin-bottom: 10px;
+}
+
+th.actions, td.actions {
+    text-align: center;
+}
+
+div.acct-btns {
+    margin: 0 auto; 
+    text-align: center;
+    width: inherit;
+    display: inline-block;
+}
+
+.acct-create {
+    float: right;
+}
+
+.acct-edit {
+    margin-right: 6px;
+}
+
+footer > p {
+    margin-bottom: 11px;
+    margin-top: 13px;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -122px;
+}
+
+.push { height: 140px; } /* Just some arbitrary space to add between footer and rest of the content, when they are close */
+
+/* not required for sticky footer; just makes some space for navigation bar */
+.wrapper > .container-fluid {
+    padding-top: 60px;
+}
+
+.select2Large {
+    width: 279px;
+}
+
+/* footer
+--------------------------------------------- */
+footer {
+    padding: 0 10px 0 10px;
+    border-top: 1px solid #dddddd;
+    background-color: #eee;
+}
+
+#footer-inner {
+    width: 940px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    font-size: 1.2em;
+    color: #999999;
+}
+
+footer a {
+    font-weight: bold;
+    color: #777777;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #73c512;
+}
+
+footer p {
+    clear: left;
+    margin: 0 0 8px 0;
+    line-height: 1.6;
+    font-size: 12px;
+}
+
+footer ul#footer-nav {
+    float: left;
+    width: 700px;
+    margin: 3px 0 10px 0;
+}
+
+#footer-nav li {
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 0 10px 0 0;
+    line-height: 1;
+    border-right: 1px solid #ccc;
+    list-style: none;
+    font-size: 12px;
+}
+
+#footer-nav li:last-child {
+    margin: 0;
+    padding: 0;
+    border-right: none;
+}
+
+footer a.footer-twitter {
+    display: inline-block;
+    margin: 0 15px 0 0;
+    padding: 1px 0 0 20px;
+    background: url('../../public/images/icon-twitter-footer.png') no-repeat 0 0;
+}
+
+footer a.footer-blog {
+    display: inline-block;
+    padding: 1px 15px 0 16px;
+    background: url('../../public/images/icon-blog.png') no-repeat 0 2px;
+}
+
+footer a.footer-twitter:hover {
+    background-position: 0 -34px;
+}
+
+footer a.footer-blog:hover {
+    background-position: 0 -36px;
+}
+
+h4#incidents-total {
+    position: relative;
+    width: 166px;
+    float: right;
+    margin: 8px 0 0 0;
+    padding: 0 0 0 54px;
+    font-size: 1.1em;
+    line-height: 1.4;
+    font-weight: normal;
+    color: #777777;
+    -webkit-border-top-right-radius: 6px;
+    -webkit-border-top-left-radius: 20px;
+    -moz-border-top-right-radius: 6px;
+    -moz-border-top-left-radius: 20px;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 20px;
+}
+
+h4#incidents-total strong {
+    display: block;
+    padding-top: 4px;
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Reports
+--------------------------------------------- */
+#rpt-sum td {
+    border-top: none;
+}
+
+table.rpt-dmo th {
+    border-bottom: 1px solid #666;
+}
+
+table.rpt-dmo td {
+    border-top: none;
+}
+
+.subnav {
+    background-color: #eee;
+}
+
+#header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.view-toggle {
+    margin-top: 6px;
+}
+
+#filters {
+    margin-top: 4px;
+}
+
+.report-accounts, #filters #datepicker-calendar {
+    z-index: 1029 !important;
+}
+
+#date-range, .print-btn {
+    margin-left: 10px;
+}
+
+#main-chart {
+    position: relative;
+    height:300px;
+    text-align: center;
+}
+
+.graph-placeholder, .graph-error {
+    margin-top: 120px;
+}
+
+.graph-error {
+    display: none;
+}
+
+#timeframe {
+    margin: 20px 0 4px;
+    width: 200px;
+    /*  position: absolute;
+      top: 0;
+      right: 10px;
+      z-index: 1028;*/
+}
+
+#totalIncidents {
+    margin: 20px 0 40px;
+    font-size: 140%;
+    font-weight: bold;
+}
+
+#stats {
+    margin-bottom: 20px;
+}
+#stats ul li {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-right: 6px;
+    min-width: 154px;
+    width: 26%;
+    height: 68px;
+    display: inline-block;
+    vlear:both;
+}
+
+#stats ul li span {
+    color:#bbb;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: normal;
+    text-shadow: 0 1px #fff;
+    display: block;
+}
+
+#stats ul li.muted {
+    color: #BBB;
+}
+
+#pie-chart {
+    float:left;
+    height: 200px;
+    text-align: right;
+}
+
+#pie-chart .graph-placeholder {
+    margin-top: 85px;
+    margin-right: 80px;
+}
+
+.legend {
+    margin-top: 24px;
+    float:left;
+    width:132px;
+}
+
+.legend h3, .legend h4 {
+    display: inline-block;
+}
+
+.pieError {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.square {
+    float: left;
+    width: 10px;
+    height: 10px;
+    margin: 9px 8px 30px 0;
+}
+
+.blue {
+    background-color: #42a3d3;
+}
+
+.green {
+    background-color: #00cc00; /* #50B432 */
+}
+
+.red {
+    background-color: #ef791b;
+}
+
+.dimension.active {
+    background-color: whiteSmoke;
+}
+
+#topN th.c1 {
+    width: 20px;
+}
+
+#topN th.c2 {
+}
+
+#topN th.c3 {
+    text-align: right;
+}
+
+#topN th.c4 {
+    width: 30%;
+}
+
+#topN td.c1 {
+    text-align: right;
+    width: 24px;
+}
+
+#topN td.c2 {
+}
+
+#topN td.c3 {
+    text-align: right;
+}
+
+#topN td.c4 {
+}
+
+.minibar {
+    background-color: #42a3d3;
+    display: inline;
+    float: left;
+    height: 1.17em;
+    margin: 0 10px 0 0;
+    min-width: 1px;
+}
+
+.dimension-group {
+    padding: 18px 0 5px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+/* Settings
+--------------------------------------------- */
+#settings-nav {
+}
+
+/* Bootstrap 2.1.1 things that I saw and liked so I'm implementing them here
+--------------------------------------------- */
+.nav .active [class^="icon-"], .nav .active [class*="icon-"] {
+    background-image: url("../../public/images/glyphicons-halflings-white.png");
+}
+
+.dropdown-menu {
+    top: 90%;
+}
+
+/* Older browser support for placeholders
+--------------------------------------------- */
+.placeholder {
+    color: #aaa;
+}
+
+.muted {
+  color: #999;
+}
+
+
+
+/* Incident Modal CSS
+--------------------------------------------- */
+.incidentModal *, .eventModal *, .viewEventsModal * {
+    box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    -ms-box-sizing: content-box !important;
+    -webkit-box-sizing: content-box !important;
+}
+
+#create-tabs, #event-tabs {
+    display: none;
+}
+
+#create-incident .modal-body {
+    min-height: 270px;
+    height: 362px;
+}
+
+.incidentModal .control-label, .eventModal .control-label {
+    width: 100px;
+}
+
+.incidentModal .controls, .eventModal .controls {
+    margin-left: 120px;
+}
+
+.incidentModal .select2Large, .eventModal .select2Large, .viewEventsModal .select2Large {
+    width: 219px;
+}
+
+.incidentModal textarea, .eventModal textarea {
+    padding: 4px;
+}
+
+#create-subscriber p.help-block {
+    min-height: 18px;
+}
+
+.create-date, .bootstrap-timepicker, #event-start-date, #event-end-date, #view-events-date {
+    position: relative;
+}
+
+.bootstrap-timepicker {
+    width: 92px;
+}
+
+.create-date .input-container, #event-start-date .input-container, #event-end-date .input-container, #view-events-date .input-container {  
+    margin-right: 28px;
+}
+
+.create-date .input-container input, #event-start-date .input-container input, #event-end-date .input-container input, #view-events-date .input-container input {
+    width: 86px;
+    margin-bottom: 0px;
+}
+
+#timepicker, #event-start-time, #event-end-time, #view-events-time {
+    width: 55px;
+    margin-bottom: 0px;
+}
+
+.create-date .add-on, .bootstrap-timepicker .add-on, #event-start-date .add-on, #event-end-date .add-on, #view-events-date .add-on {    
+    position: absolute;
+    right: 1px;
+    top: 0px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-top-right-radius: 4px;
+    border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-bottom-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.create-date .add-on, #event-start-date .add-on, #event-end-date .add-on, #view-events-time .add-on {    
+    right: 1px;
+}
+
+#create-location .controls, #event-location .controls {
+    margin-left: 1px;
+}
+
+#locationSearch {
+    margin-bottom: 0px;
+    width: 388px;
+}
+
+.select2MultiLarge {
+    width: 340px;
+}
+.select2MultiLarge .select2-choices {
+    height: 90px !important;
+    max-height: 90px;
+    overflow-y: scroll !important;
+    border: 1px solid #cccccc;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+}
+
+#event-location .form-horizontal, #event-location .control-group {
+    margin: 0;
+}
+
+#event-location .controls {
+    height: 92px;
+    margin-bottom: 15px;
+}
+
+.event-site-buttons {
+    margin-left: 8px;
+}
+
+#locationMap, #event-map {
+    width: 100%;
+}
+#locationMap {
+    height: 316px;
+}
+#event-map {
+    height: 220px;
+}
+
+#locationMap img, #event-map {
+    max-width: none;
+}
+
+#create-event .modal-body {
+    height: 327px;
+}
+
+.pac-container {
+    z-index: 1050 !important;
+    box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    -ms-box-sizing: content-box !important;
+    -webkit-box-sizing: content-box !important;
+}
+.pac-container:after {
+    content: '' !important;
+}
+
+.viewEventsModal .controls {
+    margin-left: 100px;
+}
+
+.view-events-btn-group {
+    float: left;
+    margin-right: 12px;
+}
+
+.viewEventsModal hr {
+    margin-bottom: 8px;
+}
+
+.viewEventsModal .view-events-filter-btn-group {
+    left: 50%;
+    margin-left: -44px;
+    margin-bottom: 8px;
+}
+
+#view-events-list {
+    height: 250px;
+    max-height: 250px;
+    overflow-y: scroll;
+}
+
+.view-event:first-child {
+    border-top: 1px solid #dddddd;
+}
+
+.view-event {
+    cursor: pointer;
+    padding: 8px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.view-event:hover {
+    background-color: #f5f5f5;
+}
+
+.view-event .list-wrapper ol {
+    width: 90%;
+    margin-left: 1.5em;
+}
+
+.view-event .list-wrapper ol li {
+    float: left;
+    width: 25%;
+    list-style: decimal;
+}
+
+.view-event .list-wrapper br {
+    clear: left;
+}
+
+.view-event .list-wrapper {
+    margin-bottom: 1em;
+}
+
+.view-event .event-details br {
+    margin: 0 0 9px;
+}
+
+#select-events-list .view-event {
+    cursor: pointer;
+}
+
+#select-events-list .view-event .pull-left {
+    padding: 12px 8px 12px 4px;
+}
+
+#select-events-list .view-event .content {
+    margin-left: 28px;
+}
+
+.events-list-holder {
+    text-shadow: 1px 1px #FFF;
+    color: #999;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: normal;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    margin: 0 0 0 -190px;
+}
+
+#create-netevent form {
+    margin-bottom: 18px;
+}
+
+
+/* Network Events Detail Page
+--------------------------------------------- */
+#event-detail-map {
+    width: 100%;
+    height: 300px;
+}

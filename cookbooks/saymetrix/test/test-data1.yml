@@ -1,0 +1,26 @@
+WebUser(am1):
+  email:              am1@foo.com
+  passwordHash:       5d41402abc4b2a76b9719d911017c592 # hello
+  firstname:          Account
+  lastname:           Manager1
+
+Account(a1):
+  key:      A1
+  name:     A1
+  manager:  am1
+
+MobileSubscriber(bob):
+  msisdn:     0891234567
+  account:    a1
+  firstname:  Bob
+  lastname:   Dobbs
+  email:      bob.dobbs@foo.com
+
+MobileSubscriber(bill):
+  msisdn:     0881234567
+  account:    a1
+  firstname:  Bill
+  lastname:   Hicks
+  email:      bill.hicks@foo.com
+  token:      7654321880
+  
