@@ -102,5 +102,5 @@ execute "ldconfig" do
 end
 
 execute "compile" do
-  command "g++ -I. -I/usr/local/fastflow -I/usr/local -DNO_CMAKE_CONFIG -Wall -g -o pipe_farm2 pipe_farm2.cpp -L /usr/local/lib -lzmq -lpthread"
+  command "g++ -I. -I/usr/local/fastflow -I/usr/local -DNO_CMAKE_CONFIG -Wall -g -o /usr/local/fastflow/tests/d/pipe_farm2 /usr/local/fastflow/tests/d/pipe_farm2.cpp -L /usr/local/lib -lzmq -lpthread"
 end
