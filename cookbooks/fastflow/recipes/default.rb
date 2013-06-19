@@ -73,12 +73,17 @@ package "wget" do
   action :install
 end
 
-%w[
-    make 
-  ].each do |pkg|
-  package pkg
+execute "configure" do
+  command"/usr/local/zeromq-1/configure"
 end
 
+execute "make" do
+  command "make"
+end
+
+execute "make install" do
+  command "make install"
+end
 
 file "/etc/ld.so.conf.d/libc.conf" do
   owner "root"
