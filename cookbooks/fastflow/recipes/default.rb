@@ -73,6 +73,11 @@ package "wget" do
   action :install
 end
 
+execute "copy" do
+  command "cp /usr/local/zeromq-1/include/* /usr/local/include/"
+end
+
+
 execute "configure" do
   command"/usr/local/zeromq-1/configure"
 end
