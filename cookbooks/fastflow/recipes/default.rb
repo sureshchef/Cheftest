@@ -71,6 +71,7 @@ require_recipe 'build-essential'
 
 package "wget" do
   action :install
+end
 
 %w[
     make && make install
