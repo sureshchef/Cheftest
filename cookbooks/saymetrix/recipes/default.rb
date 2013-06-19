@@ -30,6 +30,7 @@ include_recipe "play"
 
 
 application "saymetrix_app" do
+ name "saymetrix"
 path "/usr/local"
  owner "chef"
  group "chef"
@@ -37,6 +38,7 @@ path "/usr/local"
  repository "https://github.com/hrijulp/fastflow/blob/master/saymetrix.zip?raw=true"
  revision "production"
 end
+
 
 
 #application "saymetrix" do
