@@ -1,4 +1,4 @@
-name             'saymetrix'
+name             'saymetrix_app'
 maintainer       'YOUR_COMPANY_NAME'
 maintainer_email 'YOUR_EMAIL'
 license          'All rights reserved'
@@ -15,3 +15,6 @@ depends "ark"
 depends "subversion"
 depends "application"
 depends "play"
+#depends "maven"
+
+

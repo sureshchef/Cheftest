@@ -15,3 +15,7 @@ depends "ark"
 depends "subversion"
 depends "application"
 depends "play"
+#depends "maven"
+
+attribute 'usr/local/saymetrix',
+ :display_name => "saymetrix",
