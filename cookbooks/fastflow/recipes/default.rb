@@ -26,17 +26,15 @@ LD_LIBRARY_PATH = node['LD_LIBRARY']['LD_LIBRARY_PATH']
 
 ark "fastflow" do
      url 'https://github.com/sureshchef/Cheftest/blob/master/fastflow-2.0.0.tar.gz?raw=true'
-   # url 'https://github.com/hrijulp/fastflow/blob/master/fastflow-2.0.0.tar.gz?raw=true'
-   # checksum '89ba5fde0c596db388c3bbd265b63007a9cc3df3a8e6d79a46780c1a39408cb5'
     action :put
 end
 
 #ark "fastflow" do
  #version "2.0.0"
- # url 'https://github.com/hrijulp/fastflow/blob/master/fastflow-2.0.0.tar.gz?raw=true'
- # checksum '5996e676f17457c823d86f1605eaa44ca8a81e70d6a0e5f8e45b51e62e0c52e8'
- # action :install
+ # url 'https://github.com/sureshchef/Cheftest/blob/master/fastflow-2.0.0.tar.gz?raw=true'
+  # action :install_with_make
 #end
+
 
 ark "haproxy" do
    url  "http://haproxy.1wt.eu/download/1.5/src/snapshot/haproxy-ss-20120403.tar.gz"
