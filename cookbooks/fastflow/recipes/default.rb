@@ -51,7 +51,6 @@ end
 ark "zeromq" do
   url 'http://download.zeromq.org/zeromq-2.2.0.tar.gz'
   extension "tar.gz"
-  make_opts [ ' ' ]
   prefix_root '/usr/local'
   prefix_home '/usr/local/include'
   prefix_bin  '/usr/local/include'
@@ -68,10 +67,26 @@ end
 #end
 
 
+require_recipe 'build-essential'
 
-execute "ldconfig" do
-  user "root"
-  action :nothing
+package "wget" do
+  action :install
+
+%w[
+    make && make install
+  ].each do |pkg|
+  package pkg
 end
 
+
+file "/etc/ld.so.conf.d/libc.conf" do
+  owner "root"
+  group "root"
+  mode 0644
+  content "/usr/local/lib"
+end
+
+execute "ldconfig" do
+  command "/sbin/ldconfig"
+end
 
