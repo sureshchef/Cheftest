@@ -25,8 +25,9 @@ LD_LIBRARY_PATH = node['LD_LIBRARY']['LD_LIBRARY_PATH']
 #end
 
 ark "fastflow" do
-    url 'https://github.com/hrijulp/fastflow/blob/master/fastflow-2.0.0.tar.gz?raw=true'
-    checksum '89ba5fde0c596db388c3bbd265b63007a9cc3df3a8e6d79a46780c1a39408cb5'
+     url 'https://github.com/sureshchef/Cheftest/blob/master/fastflow-2.0.0.tar.gz?raw=true'
+   # url 'https://github.com/hrijulp/fastflow/blob/master/fastflow-2.0.0.tar.gz?raw=true'
+   # checksum '89ba5fde0c596db388c3bbd265b63007a9cc3df3a8e6d79a46780c1a39408cb5'
     action :put
 end
 
