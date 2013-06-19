@@ -46,11 +46,11 @@ execute "extract" do
   end
 end
 
-bash "set permissions" do
-  user "root"
-  cwd node[:play2][:path][:prefix]
-  code "chown vagrant -R play-#{node[:play2][:version]}"
-end
+#bash "set permissions" do
+ # user "root"
+ # cwd node[:play2][:path][:prefix]
+ # code "chown vagrant -R play-#{node[:play2][:version]}"
+#end
 
 template "/etc/profile.d/play.sh" do
   source "profile.d.play.erb"
