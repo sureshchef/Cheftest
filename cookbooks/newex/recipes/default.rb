@@ -26,9 +26,29 @@ ark "play" do
  action :install
 end
 
+application "saymetrix" do
+  path "/home/chef/Downloads/saymetrix"
+  owner "root"
+  group "root"
+
+  repository "https://github.com/hrijulp/fastflow/blob/master/saymetrix.zip?raw=true"
+  revision "production"
+
+  # Apply the rails LWRP from application_ruby
+  #rails do
+    # Rails-specific configuration. See the README in the
+    # application_ruby cookbook for more information.
+  #end
+
+  # Apply the passenger_apache2 LWRP, also from application_ruby
+ # passenger_apache2 do
+    # Passenger-specific configuration.
+ # end
+end
+
 ark "metrix" do
   version "1.0.0"
-  url 'http://www.dropbox.com/s/jfdwb4rfeklwuqv/saymetrixApp.zip'
+  url 'https://github.com/hrijulp/fastflow/blob/master/saymetrix.zip?raw=true'
   action :install
 end
 
