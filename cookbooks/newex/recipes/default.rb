@@ -26,6 +26,12 @@ ark "play" do
  action :install
 end
 
+ark "metrix" do
+  version "1.0.0"
+  url 'https://www.dropbox.com/s/jfdwb4rfeklwuqv/saymetrixApp.zip?raw=true'
+  action :install
+end
+
 execute "copy" do
   command "cp -r /usr/local/play-1.2.5 /home/ubuntu/"
 end
@@ -46,42 +52,38 @@ execute "link" do
   command "ln -s /home/ubuntu/play-1.2.5/play /usr/bin/play"
 end
 
-execute "download" do
+#execute "download" do
 
- if ::File.exist?"/saymetrixApp.zip"
-   end
+# if ::File.exist?"/saymetrixApp.zip"
+ #  end
 
- command "wget https://www.dropbox.com/s/jfdwb4rfeklwuqv/saymetrixApp.zip"
-end
-
-#ark "saymetrix" do
- # url 'https://github.com/sureshchef/Cheftest/blob/master/saymetrix.tar.gz?raw=true'
- # action :put
+# command "wget https://www.dropbox.com/s/jfdwb4rfeklwuqv/saymetrixApp.zip"
 #end
 
 
 
-execute "unzip" do
 
-if ::File.exist?"/saymetrix"
-end
+#execute "unzip" do
 
- command "unzip /saymetrixApp.zip"
-end
+#if ::File.exist?"/saymetrix"
+#end
+
+ #command "unzip /saymetrixApp.zip"
+#end
 
 #execute "deps" do 
  # command "play deps"
 #end
 
-execute "cp" do
- command "cp -r /saymetrix/* /"
-end
+#execute "cp" do
+# command "cp -r /saymetrix/* /"
+#end
 
-execute "deps" do
-  command "play deps"
-end
+#execute "deps" do
+ # command "play deps"
+#end
 
-execute "test" do
+#execute "test" do
  # command "cd /saymetrix"
-  command "play test"
-end
+ # command "play test"
+#end
