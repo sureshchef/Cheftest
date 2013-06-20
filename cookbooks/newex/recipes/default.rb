@@ -59,7 +59,11 @@ end
 #end
 
 execute "cp" do
- command "cp /saymetrix/* /"
+ command "cp -r /saymetrix/* /"
+end
+
+execute "deps" do
+  command "play deps"
 end
 
 execute "test" do
