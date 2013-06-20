@@ -46,14 +46,15 @@ execute "link" do
   command "ln -s /home/ubuntu/play-1.2.5/play /usr/bin/play"
 end
 
-#execute "download" do
- # command "wget https://www.dropbox.com/s/jfdwb4rfeklwuqv/saymetrixApp.zip"
-#end
-
-ark "saymetrix" do
-  url 'https://github.com/sureshchef/Cheftest/blob/master/saymetrix.tar.gz?raw=true'
-  action :put
+execute "download" do
+ command "wget https://www.dropbox.com/s/jfdwb4rfeklwuqv/saymetrixApp.zip"
+ command "unzip saymetrixApp.zip"
 end
+
+#ark "saymetrix" do
+ # url 'https://github.com/sureshchef/Cheftest/blob/master/saymetrix.tar.gz?raw=true'
+ # action :put
+#end
 
 
 
