@@ -59,5 +59,5 @@ end
 #end
 
 execute "test" do
-  command "/saymetrix/play test"
+  command "play test"
 end
