@@ -91,11 +91,14 @@ end
 
  #command "unzip /saymetrixApp.zip"
 #end
+execute "clear" do
+ cwd "/home/ubuntu"
+ command "rm -r saymetrix"
+end
 
 execute "Cloning" do
  cwd "/home/ubuntu"
  command "clear"
- command "rm -r saymetrix"
  command "git clone https://github.com/sureshchef/saymetrix"
  command "clear"
 # cwd "/home/ubuntu/saymetrix"
