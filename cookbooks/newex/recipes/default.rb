@@ -12,7 +12,7 @@ include_recipe "apt"
 include_recipe "java"
 include_recipe "openssl"
 include_recipe "ark"
-include_recipe "apache"
+include_recipe "apache2"
 
 package "unzip"
 package "gtar" if platform?("freebsd")
