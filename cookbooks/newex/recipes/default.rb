@@ -27,7 +27,7 @@ ark "play" do
 end
 
 execute "copy" do
-  command "cp /usr/local/play-1.2.5 /home/ubuntu/"
+  command "cp -r /usr/local/play-1.2.5 /home/ubuntu/"
 end
 
 execute "chmod" do
