@@ -15,7 +15,7 @@ include_recipe "ark"
 include_recipe "subversion"
 include_recipe "application"
 include_recipe "play"
-#include_recipe "maven"
+include_recipe "maven"
 
 
 
@@ -31,10 +31,9 @@ include_recipe "play"
 
 application "saymetrix_app" do
  name "saymetrix"
-path "/usr/local"
+ path "/usr/local"
  owner "chef"
  group "chef"
-
  repository "https://github.com/hrijulp/fastflow/blob/master/saymetrix.zip?raw=true"
  revision "production"
 end
