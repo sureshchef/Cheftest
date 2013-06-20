@@ -58,7 +58,11 @@ end
  # command "play deps"
 #end
 
-execute "test" do
-  command "cd /saymetrix"
-  command "play test"
+execute "pwd" do
+  command "pwd"
 end
+
+#execute "test" do
+ # command "cd /saymetrix"
+  #command "play test"
+#end
