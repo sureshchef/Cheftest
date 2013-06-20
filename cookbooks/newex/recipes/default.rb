@@ -94,19 +94,20 @@ end
 
 execute "Cloning" do
  cwd "/home/ubuntu"
+ command "clear"
  command "git clone https://github.com/sureshchef/saymetrix"
 # cwd "/home/ubuntu/saymetrix"
 # command "play deps"
 # command "play test"
 end
 
-execute "Apptest" do
+execute "Deps" do
   cwd "/home/ubuntu/saymetrix"
+  command "clear"
   command "play deps"
-  command "play test"
 end
 
-#execute "test" do
- #cwd "/home/ubuntu/saymetrix"
- #command "play test"
-#end
+execute "Test" do
+  cwd "/home/ubuntu/saymetrix"
+  command "play test"
+end
