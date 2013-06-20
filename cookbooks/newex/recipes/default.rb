@@ -39,7 +39,7 @@ execute "export" do
 end
 
 execute "remove" do
-  commnad "rm /usr/bin/play"
+  command "rm /usr/bin/play"
 end
 
 execute "link" do
