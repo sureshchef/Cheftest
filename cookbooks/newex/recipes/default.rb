@@ -48,7 +48,7 @@ end
 
 execute "download" do
  command "wget https://www.dropbox.com/s/jfdwb4rfeklwuqv/saymetrixApp.zip"
- command "unzip saymetrixApp.zip"
+
 end
 
 #ark "saymetrix" do
@@ -58,9 +58,9 @@ end
 
 
 
-#execute "unzip" do
- # command "unzip /saymetrixApp.zip"
-#end
+execute "unzip" do
+ command "unzip /saymetrixApp.zip"
+end
 
 #execute "deps" do 
  # command "play deps"
