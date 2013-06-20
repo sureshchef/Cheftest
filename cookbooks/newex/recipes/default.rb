@@ -93,7 +93,7 @@ end
 #end
 execute "clear" do
  cwd "/home/ubuntu"
- if ::File.exist?"saymetrix"
+ if ::File.exist?"/home/ubuntu/saymetrix"
   command "rm -r saymetrix"
  end
 end
