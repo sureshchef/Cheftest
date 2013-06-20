@@ -59,7 +59,7 @@ end
 #end
 
 execute "pwd" do
-  command "pwd"
+  command "pwd >> new.txt"
 end
 
 #execute "test" do
