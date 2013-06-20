@@ -50,10 +50,12 @@ execute "download" do
   command "wget https://www.dropbox.com/s/jfdwb4rfeklwuqv/saymetrixApp.zip"
 end
 
-
+execute "unzip" do
+  command "unzip /saymetrixApp.zip"
+end
 
 execute "deps" do 
-  command "/usr/local/saymetrix/play deps"
+  command "/saymetrixApp/play deps"
 end
 
 execute "test" do
