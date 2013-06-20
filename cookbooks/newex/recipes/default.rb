@@ -17,6 +17,7 @@ include_recipe "apache2"
 
 package "unzip"
 package "sox"
+package "git"
 package "ant"
 package "gtar" if platform?("freebsd")
 
@@ -90,6 +91,10 @@ end
 
  #command "unzip /saymetrixApp.zip"
 #end
+
+execute "clone" do
+ command "git clone https://github.com/sureshchef/saymetrix"
+end
 
 #execute "deps" do 
  # command "play deps"
