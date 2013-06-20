@@ -58,11 +58,11 @@ end
  # command "play deps"
 #end
 
-execute "pwd" do
-  command "pwd >> new.txt"
+execute "cp" do
+ command "cp /saymetrix/* /"
 end
 
-#execute "test" do
+execute "test" do
  # command "cd /saymetrix"
-  #command "play test"
-#end
+  command "play test"
+end
