@@ -47,11 +47,11 @@ end
  # end
 #end
 
-ark "metrix" do
-  version "1.0.0"
-  url 'https://github.com/hrijulp/fastflow/blob/master/saymetrix.zip?raw=true'
-  action :install
-end
+#ark "metrix" do
+ # version "1.0.0"
+ # url 'https://github.com/hrijulp/fastflow/blob/master/saymetrix.zip?raw=true'
+ # action :install
+#end
 
 execute "copy" do
   command "cp -r /usr/local/play-1.2.5 /home/ubuntu/"
