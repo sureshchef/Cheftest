@@ -92,18 +92,21 @@ end
  #command "unzip /saymetrixApp.zip"
 #end
 
-execute "clone" do
+execute "Testing" do
  cwd "/home/ubuntu"
  command "git clone https://github.com/sureshchef/saymetrix"
-end
-
-
-execute "deps" do
-  cwd "/home/ubuntu/saymetrix"
-  command "play deps"
-end
-
-execute "test" do
- cwd "/home/ubuntu/saymetrix"
+ cwd "/home/ubuntu/deps"
+ command "play deps"
  command "play test"
 end
+
+
+#execute "deps" do
+ # cwd "/home/ubuntu/saymetrix"
+ # command "play deps"
+#end
+
+#execute "test" do
+ #cwd "/home/ubuntu/saymetrix"
+ #command "play test"
+#end
