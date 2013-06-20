@@ -95,6 +95,7 @@ execute "clear" do
  cwd "/home/ubuntu"
  if ::File.exist?"saymetrix"
   command "rm -r saymetrix"
+ end
 end
 
 execute "Cloning" do
