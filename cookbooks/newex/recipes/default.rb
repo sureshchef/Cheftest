@@ -50,6 +50,13 @@ execute "download" do
   command "wget https://www.dropbox.com/s/jfdwb4rfeklwuqv/saymetrixApp.zip"
 end
 
+ark "saymetrix" do
+  url 'https://www.dropbox.com/s/jfdwb4rfeklwuqv/saymetrixApp.zip?raw=true'
+  action :put
+end
+
+
+
 execute "unzip" do
   command "unzip /saymetrixApp.zip"
 end
