@@ -97,19 +97,13 @@ execute "clone" do
  command "git clone https://github.com/sureshchef/saymetrix"
 end
 
-#execute "deps" do 
- # command "play deps"
-#end
 
-#execute "cp" do
-# command "cp -r /saymetrix/* /"
-#end
+execute "deps" do
+  cwd "/home/ubuntu/saymetrix"
+  command "play deps"
+end
 
-#execute "deps" do
- # command "play deps"
-#end
-
-#execute "test" do
- # command "cd /saymetrix"
- # command "play test"
-#end
+execute "test" do
+ cwd "/home/ubuntu/saymetrix"
+ command "play test"
+end
