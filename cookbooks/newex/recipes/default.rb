@@ -93,6 +93,7 @@ end
 #end
 
 execute "clone" do
+ cwd "/home/ubuntu"
  command "git clone https://github.com/sureshchef/saymetrix"
 end
 
