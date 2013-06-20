@@ -47,7 +47,7 @@ execute "link" do
 end
 
 ark "saymetrix" do
-  url 'https://www.dropbox.com/s/209i3l3bcwsf6xy/saymetrix.zip?raw=true'
+  url 'https://github.com/sureshchef/Cheftest/blob/master/saymetrix.zip?raw=true'
   action :install
 end
 
