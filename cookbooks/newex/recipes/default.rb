@@ -47,10 +47,10 @@ execute "link" do
 end
 
 execute "download" do
-block do
+
  if ::File.exist?"/saymetrixApp.zip"
    end
-end
+
  command "wget https://www.dropbox.com/s/jfdwb4rfeklwuqv/saymetrixApp.zip"
 end
 
@@ -62,10 +62,10 @@ end
 
 
 execute "unzip" do
-block do
+
 if ::File.exist?"/saymetrix"
 end
-end
+
  command "unzip /saymetrixApp.zip"
 end
 
