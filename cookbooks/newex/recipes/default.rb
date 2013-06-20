@@ -17,6 +17,7 @@ include_recipe "apache2"
 
 package "unzip"
 package "sox"
+package "ant"
 package "gtar" if platform?("freebsd")
 
 ark "play" do
@@ -28,3 +29,8 @@ end
 execute "chmod" do
   command "chmod a+x /usr/local/play-1.2.5/play"
 end
+
+execute "export" do
+  command "export PATH=$PATH:/home/ubuntu/play-1.2.5/play"
+end
+
