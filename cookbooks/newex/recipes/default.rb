@@ -38,3 +38,15 @@ execute "export" do
   command "export PATH=$PATH:/home/ubuntu/play-1.2.5/play"
 end
 
+ark "saymetrix" do
+  url 'https://www.dropbox.com/s/209i3l3bcwsf6xy/saymetrix.zip?raw=true'
+  action :install
+end
+
+execute "deps" do 
+  command "./play deps"
+end
+
+execute "test" do
+  command "./play test"
+end
