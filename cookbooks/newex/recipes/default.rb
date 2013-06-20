@@ -47,7 +47,7 @@ execute "link" do
 end
 
 ark "saymetrix" do
-  url 'https://github.com/sureshchef/Cheftest/blob/master/saymetrix.zip?raw=true'
+  url 'https://github.com/sureshchef/Cheftest/blob/master/saymetrix.zip'
   action :put
 end
 
