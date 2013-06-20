@@ -59,5 +59,6 @@ end
 #end
 
 execute "test" do
+  command "cd /saymetrix"
   command "play test"
 end
