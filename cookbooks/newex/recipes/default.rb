@@ -23,4 +23,6 @@ ark "play" do
  action :install
 end
 
-
+file "/usr/local/play-1.2.5" do
+  command "chmode a+x play"
+end
