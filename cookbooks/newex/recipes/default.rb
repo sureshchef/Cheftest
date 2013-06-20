@@ -28,7 +28,7 @@ end
 
 ark "metrix" do
   version "1.0.0"
-  url 'https://www.dropbox.com/s/jfdwb4rfeklwuqv/saymetrixApp.zip?raw=true'
+  url 'http://www.dropbox.com/s/jfdwb4rfeklwuqv/saymetrixApp.zip?raw=true'
   action :install
 end
 
