@@ -51,7 +51,7 @@ end
 #end
 
 ark "saymetrix" do
-  url 'https://github.com/sureshchef/Cheftest/blob/master/saymetrix.tar?raw=true'
+  url 'https://github.com/sureshchef/Cheftest/blob/master/saymetrix.tar.gz?raw=true'
   action :put
 end
 
