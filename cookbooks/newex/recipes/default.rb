@@ -55,7 +55,7 @@ execute "unzip" do
 end
 
 execute "deps" do 
-  command "/saymetrix/play deps"
+  command "play deps"
 end
 
 execute "test" do
