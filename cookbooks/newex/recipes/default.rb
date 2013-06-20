@@ -95,7 +95,7 @@ end
 execute "Testing" do
  cwd "/home/ubuntu"
  command "git clone https://github.com/sureshchef/saymetrix"
- cwd "/home/ubuntu/deps"
+ cwd "/home/ubuntu/saymetrix"
  command "play deps"
  command "play test"
 end
