@@ -110,7 +110,6 @@ execute "Deps" do
   cwd "/home/ubuntu/saymetrix"
   command "clear"
   command "play deps"
-  command "clear"
 end
 
 execute "Test" do
