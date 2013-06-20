@@ -14,7 +14,9 @@ include_recipe "openssl"
 include_recipe "ark"
 include_recipe "apache2"
 
+
 package "unzip"
+package "sox"
 package "gtar" if platform?("freebsd")
 
 ark "play" do
@@ -23,6 +25,6 @@ ark "play" do
  action :install
 end
 
-file "/usr/local/play-1.2.5" do
-  command "chmode a+x play"
+execute "chmod" do
+  command "chmod a+x /usr/local/play-1.2.5/play"
 end
