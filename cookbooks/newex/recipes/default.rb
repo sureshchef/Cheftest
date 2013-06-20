@@ -26,8 +26,12 @@ ark "play" do
  action :install
 end
 
+execute "copy" do
+  command "cp /usr/local/play-1.2.5 /home/ubuntu/"
+end
+
 execute "chmod" do
-  command "chmod a+x /usr/local/play-1.2.5/play"
+  command "chmod a+x /home/ubuntu/play-1.2.5/play"
 end
 
 execute "export" do
