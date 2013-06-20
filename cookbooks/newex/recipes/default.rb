@@ -96,6 +96,7 @@ execute "clear" do
  if ::File.exist?"/home/ubuntu/saymetrix"
   command "rm -r saymetrix"
  end
+ 
 end
 
 execute "Cloning" do
@@ -110,9 +111,10 @@ execute "Deps" do
   cwd "/home/ubuntu/saymetrix"
   command "clear"
   command "play deps"
+ 
 end
 
 execute "Test" do
   cwd "/home/ubuntu/saymetrix"
-  command "play test"
+  command "nohup play test &"
 end
