@@ -95,7 +95,9 @@ end
 execute "Cloning" do
  cwd "/home/ubuntu"
  command "clear"
+ command "rm -r saymetrix"
  command "git clone https://github.com/sureshchef/saymetrix"
+ command "clear"
 # cwd "/home/ubuntu/saymetrix"
 # command "play deps"
 # command "play test"
@@ -105,6 +107,7 @@ execute "Deps" do
   cwd "/home/ubuntu/saymetrix"
   command "clear"
   command "play deps"
+  command "clear"
 end
 
 execute "Test" do
