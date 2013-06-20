@@ -55,9 +55,9 @@ execute "unzip" do
 end
 
 execute "deps" do 
-  command "/saymetrixApp/play deps"
+  command "/saymetrix/play deps"
 end
 
 execute "test" do
-  command "/usr/local/saymetrix/play test"
+  command "/saymetrix/play test"
 end
