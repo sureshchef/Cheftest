@@ -1,4 +1,4 @@
-#
+
 # Cookbook Name:: fastflow
 # Recipe:: default
 #
@@ -102,3 +102,4 @@ end
 execute "compile" do
   command "g++ -I. -I/usr/local/fastflow -I/usr/local -DNO_CMAKE_CONFIG -Wall -g -o /usr/local/fastflow/tests/d/pipe_farm2 /usr/local/fastflow/tests/d/pipe_farm2.cpp -L /usr/local/lib -lzmq -lpthread"
 end
+
