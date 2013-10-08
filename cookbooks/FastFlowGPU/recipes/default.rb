@@ -117,6 +117,12 @@ command "wget https://www.dropbox.com/s/45ey0d67phuz6nb/NVIDIA-Linux-x86_64-310.
 end
 
 execute "Nvidia package" do
+cwd node['NVIDIA']['Driver']
+command "sudo chmod a+x NVIDIA-Linux-x86_64-310.51.run"
+end
+
+
+execute "Nvidia package" do
 command "sudo apt-get install linux-headers-$(uname -r)"
 end
 
@@ -126,21 +132,21 @@ command "sudo ./NVIDIA-Linux-x86_64-310.51.run -a -s"
 end
 
 execute "copy" do
-  command "cp /usr/local/zeromq-1/include/* /usr/local/include/"
+  command "sudo cp /usr/local/zeromq-1/include/* /usr/local/include/"
 end
 
 
 execute "configure" do
   cwd node['ZMQ']['path']
-  command "./configure"
+  command "sudo ./configure"
 end
 
 execute "make" do
-  command "make"
+  command "sudo make"
 end
 
 execute "make install" do
-  command "make install"
+  command "sudo make install"
 end
 
 file "/etc/ld.so.conf.d/libc.conf" do
@@ -154,9 +160,9 @@ execute "ldconfig" do
   command "/sbin/ldconfig"
 end
 
-execute "app1" do
-  command "g++ -I. -I/usr/local/fastflow -I/usr/local -DNO_CMAKE_CONFIG -Wall -g -o /usr/local/fastflow/tests/d/pipe_farm2 /usr/local/fastflow/tests/d/pipe_farm2.cpp -L /usr/local/lib -lzmq -lpthread"
-end
+#execute "app1" do
+ # command "g++ -I. -I/usr/local/fastflow -I/usr/local -DNO_CMAKE_CONFIG -Wall -g -o /usr/local/fastflow/tests/d/pipe_farm2 /usr/local/fastflow/tests/d/pipe_farm2.cpp -L /usr/local/lib -lzmq -lpthread"
+#end
 
 execute "app2" do
 cwd node['FastFlow']['experimental']
