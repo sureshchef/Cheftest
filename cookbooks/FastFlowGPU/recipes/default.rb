@@ -23,11 +23,12 @@ LD_LIBRARY_PATH = node['LD_LIBRARY']['LD_LIBRARY_PATH']
 #ENV['LD_LIBRARY_PATH'] = '#{ENV['LD_LIBRARY_PATH']}:/usr/local/lib'
 #end
 
-ark "fastflow" do
+execute "fastflow" do
      cwd node['FastFlow']['node']
-     url 'https://www.dropbox.com/s/3zawjcyp40hh1i5/fastflow-2.0.1_cloudtest.tgz'
-    action :put
+     command "wget https://www.dropbox.com/s/3zawjcyp40hh1i5/fastflow-2.0.1_cloudtest.tgz"
 end
+
+
 
 execute "tar" do
 cwd node['FastFlow']['node']
