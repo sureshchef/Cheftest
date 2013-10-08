@@ -111,6 +111,28 @@ cwd node['ocl']['intel']
 command "sudo fakeroot alien --to-deb intel_ocl_sdk_2012_x64.rpm"
 end
 
+execute "wget" do
+cwd node['NVIDIA']['Driver']
+command "wget https://www.dropbox.com/s/45ey0d67phuz6nb/NVIDIA-Linux-x86_64-310.51.run"
+end
+
+execute "Nvidia package" do
+cwd node['NVIDIA']['Driver']
+command "sudo chmod a+x NVIDIA-Linux-x86_64-310.51.run"
+end
+
+
+execute "Nvidia package" do
+command "sudo apt-get install linux-headers-$(uname -r)"
+end
+
+execute "Nvidia" do
+cwd node['NVIDIA']['Driver']
+command "sudo ./NVIDIA-Linux-x86_64-310.51.run -a -s"
+end
+
+
+
 execute "intel" do
 cwd node['ocl']['intel']
 command "sudo dpkg -i intel-ocl-sdk_2.0-31361_amd64.deb"

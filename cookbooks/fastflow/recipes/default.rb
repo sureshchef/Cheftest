@@ -12,7 +12,7 @@ include_recipe "java"
 include_recipe "build-essential"
 include_recipe "openssl"
 include_recipe "ark"
-include_recipe "subversion"
+#include_recipe "subversion"
 
 ZMQ_HOME = node['ZMQ']['ZMQ_HOME']
 LD_LIBRARY_PATH = node['LD_LIBRARY']['LD_LIBRARY_PATH']
