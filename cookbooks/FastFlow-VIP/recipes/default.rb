@@ -93,6 +93,32 @@ cwd node['json']['build']
 command "sudo cmake .."
 end
 
+execute "intel" do
+cwd node['ocl']['intel']
+command "wget https://www.dropbox.com/s/a0o2xdw2e9atlld/intel_ocl_sdk_2012_x64.rpm"
+end
+
+execute "update" do
+command "sudo apt-get update" 
+end
+
+execute "libnuma" do
+command "sudo apt-get -y  install rpm alien libnuma1 fakeroot mesa-common-dev"
+end
+
+execute "fakeroot" do
+cwd node['ocl']['intel']
+command "sudo fakeroot alien --to-deb intel_ocl_sdk_2012_x64.rpm"
+end
+
+execute "" do
+cwd node['ocl']['intel']
+command "sudo dpkg -i intel-ocl-sdk_2.0-31361_amd64.deb"
+end
+
+execute "link" do
+command "sudo ln -s /usr/lib64/libOpenCL.so /usr/lib/libOpenCL.so"
+end
 
 
 execute "copy" do
