@@ -24,13 +24,13 @@ LD_LIBRARY_PATH = node['LD_LIBRARY']['LD_LIBRARY_PATH']
 #end
 
 ark "fastflow" do
-     cwd ['FastFlow']['node']
+     cwd node['FastFlow']['node']
      url 'https://www.dropbox.com/s/3zawjcyp40hh1i5/fastflow-2.0.1_cloudtest.tgz'
     action :put
 end
 
 execute "tar" do
-cwd ['FastFlow']['node']
+cwd node['FastFlow']['node']
 command "tar xzvf fastflow-2.0.1_cloudtest.tgz"
 end
 
@@ -84,7 +84,7 @@ package "wget" do
 end
 
 execute "intel" do
-cwd ['ocl']['intel']
+cwd node['ocl']['intel']
 command "wget https://www.dropbox.com/s/a0o2xdw2e9atlld/intel_ocl_sdk_2012_x64.rpm"
 end
 
@@ -97,12 +97,12 @@ command "sudo apt-get -y  install rpm alien libnuma1 fakeroot mesa-common-dev"
 end
 
 execute "fakeroot" do
-cwd ['ocl']['intel']
+cwd node['ocl']['intel']
 command "sudo fakeroot alien --to-deb intel_ocl_sdk_2012_x64.rpm"
 end
 
 execute "" do
-cwd ['ocl']['intel']
+cwd node['ocl']['intel']
 command "sudo dpkg -i intel-ocl-sdk_2.0-31361_amd64.deb"
 end
 
@@ -111,7 +111,7 @@ command "sudo ln -s /usr/lib64/libOpenCL.so /usr/lib/libOpenCL.so"
 end
 
 execute "wget" do
-cwd ['NVIDIA']['Driver']
+cwd node['NVIDIA']['Driver']
 command "wget https://www.dropbox.com/s/45ey0d67phuz6nb/NVIDIA-Linux-x86_64-310.51.run"
 end
 
@@ -120,7 +120,7 @@ command "sudo apt-get install linux-headers-$(uname -r)"
 end
 
 execute "Nvidia" do
-cwd ['NVIDIA']['Driver']
+cwd node['NVIDIA']['Driver']
 command "sudo ./NVIDIA-Linux-x86_64-310.51.run -a -s"
 end
 
@@ -130,7 +130,7 @@ end
 
 
 execute "configure" do
-  cwd ['ZMQ']['path']
+  cwd node['ZMQ']['path']
   command "./configure"
 end
 
@@ -158,6 +158,6 @@ execute "app1" do
 end
 
 execute "app2" do
-cwd ['FastFlow']['experimental']
-command "g++ -DDNODE_FARM -I. -I/usr/local/zmq/include -I /home/ubuntu/fastflow-2.0.1_cloudtest -DNO_CMAKE_CONFIG -Wall -O3 -finline-functions -o bench_ocl bench_ocl.cpp -L /usr/local/zmq/lib -lpthread -lzmq -lOpenCL"
+cwd node['FastFlow']['experimental']
+command "g++ -DDNODE_FARM -I. -I/usr/local/zmq/include -I /usr/local/fastflow-2.0.1_cloudtest -DNO_CMAKE_CONFIG -Wall -O3 -finline-functions -o bench_ocl bench_ocl.cpp -L /usr/local/zmq/lib -lpthread -lzmq -lOpenCL"
 end
