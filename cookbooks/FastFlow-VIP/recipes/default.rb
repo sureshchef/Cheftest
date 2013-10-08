@@ -23,10 +23,9 @@ LD_LIBRARY_PATH = node['LD_LIBRARY']['LD_LIBRARY_PATH']
 #ENV['LD_LIBRARY_PATH'] = '#{ENV['LD_LIBRARY_PATH']}:/usr/local/lib'
 #end
 
-ark "fastflow" do
+execute "fastflow" do
     cwd node['FastFlow']['node']
-     url 'https://www.dropbox.com/s/p8lnndsek2lbcmh/FastFlow-VIP.zip'
-    action :put
+     command 'wget https://www.dropbox.com/s/p8lnndsek2lbcmh/FastFlow-VIP.zip'
 end
 
 #ark "fastflow" do
@@ -97,21 +96,21 @@ end
 
 
 execute "copy" do
-  command "cp /usr/local/zeromq-1/include/* /usr/local/include/"
+  command "sudo cp /usr/local/zeromq-1/include/* /usr/local/include/"
 end
 
 
 execute "configure" do
   cwd node['ZMQ']['path']
-  command "./configure"
+  command "sudo ./configure"
 end
 
 execute "make" do
-  command "make"
+  command "sudo make"
 end
 
 execute "make install" do
-  command "make install"
+  command "sudo make install"
 end
 
 file "/etc/ld.so.conf.d/libc.conf" do
@@ -127,6 +126,6 @@ end
 
 execute "app1" do
   cwd node['VIP']['test']
-  command "make"
+  command "sudo make"
 end
 
