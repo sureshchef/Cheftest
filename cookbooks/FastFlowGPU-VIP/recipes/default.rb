@@ -138,11 +138,12 @@ cwd node['ocl']['intel']
 command "sudo dpkg -i intel-ocl-sdk_2.0-31361_amd64.deb"
 end
 
-execute "OpenCL" do
-    command "sudo rm /usr/lib/libOpenCL.so"
-    not_if { ::File.exists?("/usr/lib/libOpenCL.so")}
-    ignore_failure	true
+execute "clear" do
+ if ::File.exist?"/usr/lib/libOpenCL.so"
+  command "rm /usr/lib/libOpenCL.so"
+ end
 end
+
 
 execute "link" do
 command "sudo ln -s /usr/lib64/libOpenCL.so /usr/lib/libOpenCL.so"
