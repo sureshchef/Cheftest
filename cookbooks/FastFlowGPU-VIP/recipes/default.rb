@@ -162,10 +162,12 @@ execute "configure" do
 end
 
 execute "make" do
+  cwd node['ZMQ']['path']
   command "sudo make"
 end
 
 execute "make install" do
+  cwd node['ZMQ']['path']
   command "sudo make install"
 end
 
